@@ -1,0 +1,911 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>コマンド: setup &mdash; solution-finder 0.950 ドキュメント</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/setup/main.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="コマンド: ren" href="../ren/main.html" />
+    <link rel="prev" title="key: none" href="../path/csv.html" />
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-93540402-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-93540402-4');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> solution-finder
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quick_start.html">クイックスタート</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quick_start.html#id2">はじめに</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quick_start.html#windows">Windows (コマンドラインから操作する)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quick_start.html#windows-bat">Windows (batをベースにオプションを変更する)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quick_start.html#mac">Mac</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../field.html">フィールドの指定</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../field.html#id2">概要</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../field.html#id3">書き方: テト譜をパラメータから入力する場合</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../field.html#id4">テト譜の入力方法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../field.html#id5">書き方: テキストファイルからテト譜を入力する場合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../field.html#id6">書き方: テキストファイルからフィールド情報を直接かく場合</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../field.html#id7">フィールドの変更方法と制限</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../patterns.html">ミノの組み合わせ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../patterns.html#id2">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patterns.html#id3">基本ルール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patterns.html#id4">要素ルール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patterns.html#id5">書き方: パターンファイルの場合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patterns.html#id6">書き方: テト譜の場合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patterns.html#id9">書き方: コマンドラインの場合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../patterns.html#id10">サンプル: コマンド集</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../command.html">コマンドについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#id2">概要</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../command.html#id3">サブコマンドについて</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#id4">テト譜からオプションを指定する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#id5">オプションの優先順位</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../percent/main.html">コマンド: percent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../percent/main.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../percent/main.html#id2">基本コマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../percent/main.html#id3">注意事項</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../percent/main.html#id4">オプション一覧</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#h-hold-default-use"><code class="docutils literal notranslate"><span class="pre">-H</span></code>, <code class="docutils literal notranslate"><span class="pre">--hold</span></code> [default: use]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#t-tetfu-default"><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetfu</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#p-page-default-1"><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--page</span></code> [default: 1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#p-patterns-default"><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#c-clear-line-default-4"><code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--clear-line</span></code> [default: 4]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#d-drop-default-softdrop"><code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--drop</span></code> [default: softdrop]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#th-threads-default-1"><code class="docutils literal notranslate"><span class="pre">-th</span></code>, <code class="docutils literal notranslate"><span class="pre">--threads</span></code> [default: -1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#td-tree-depth-default-3"><code class="docutils literal notranslate"><span class="pre">-td</span></code>, <code class="docutils literal notranslate"><span class="pre">--tree-depth</span></code> [default: 3]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#fc-failed-count-default-100"><code class="docutils literal notranslate"><span class="pre">-fc</span></code>, <code class="docutils literal notranslate"><span class="pre">--failed-count</span></code> [default: 100]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#lp-log-path-default-output-last-output-txt"><code class="docutils literal notranslate"><span class="pre">-lp</span></code>, <code class="docutils literal notranslate"><span class="pre">--log-path</span></code> [default: output/last_output.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#fp-field-path-default-input-field-txt"><code class="docutils literal notranslate"><span class="pre">-fp</span></code>, <code class="docutils literal notranslate"><span class="pre">--field-path</span></code> [default: input/field.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../percent/main.html#pp-patterns-path-default-input-patterns-txt"><code class="docutils literal notranslate"><span class="pre">-pp</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns-path</span></code> [default: input/patterns.txt]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../percent/main.html#id5">出力画面のサンプル</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../path/main.html">コマンド: path</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../path/main.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../path/main.html#id2">基本コマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../path/main.html#id3">出力フォーマット</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../path/main.html#html">HTML形式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../path/main.html#csv">CSV形式</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../path/csv.html">key: none</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/csv.html#key-solution">key: solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/csv.html#key-pattern">key: pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/csv.html#key-use">key: use</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../path/main.html#id4">オプション一覧</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#h-hold-default-use"><code class="docutils literal notranslate"><span class="pre">-H</span></code>, <code class="docutils literal notranslate"><span class="pre">--hold</span></code> [default: use]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#t-tetfu-default"><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetfu</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#p-page-default-1"><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--page</span></code> [default: 1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#p-patterns-default"><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#c-clear-line-default-4"><code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--clear-line</span></code> [default: 4]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#f-format-default-html"><code class="docutils literal notranslate"><span class="pre">-f</span></code>, <code class="docutils literal notranslate"><span class="pre">--format</span></code> [default: html]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#k-key-default-none"><code class="docutils literal notranslate"><span class="pre">-k</span></code>, <code class="docutils literal notranslate"><span class="pre">--key</span></code> [default: none]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#s-split-default-no"><code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">--split</span></code> [default: no]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#l-max-layer-default-2"><code class="docutils literal notranslate"><span class="pre">-L</span></code>, <code class="docutils literal notranslate"><span class="pre">--max-layer</span></code> [default: 2]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#so-specified-only-default-yes"><code class="docutils literal notranslate"><span class="pre">-so</span></code>, <code class="docutils literal notranslate"><span class="pre">--specified-only</span></code> [default: yes]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#r-reserved-default-false"><code class="docutils literal notranslate"><span class="pre">-r</span></code>, <code class="docutils literal notranslate"><span class="pre">--reserved</span></code> [default: false]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#d-drop-default-soft"><code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--drop</span></code> [default: soft]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#th-threads-default-1"><code class="docutils literal notranslate"><span class="pre">-th</span></code>, <code class="docutils literal notranslate"><span class="pre">--threads</span></code> [default: -1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#cb-cached-bit-default-0"><code class="docutils literal notranslate"><span class="pre">-cb</span></code>, <code class="docutils literal notranslate"><span class="pre">--cached-bit</span></code> [default: 0]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#o-output-base-default-output-path-txt"><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output-base</span></code> [default: output/path.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#lp-log-path-default-output-last-output-txt"><code class="docutils literal notranslate"><span class="pre">-lp</span></code>, <code class="docutils literal notranslate"><span class="pre">--log-path</span></code> [default: output/last_output.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#fp-field-path-default-input-field-txt"><code class="docutils literal notranslate"><span class="pre">-fp</span></code>, <code class="docutils literal notranslate"><span class="pre">--field-path</span></code> [default: input/field.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../path/main.html#pp-patterns-path-default-input-patterns-txt"><code class="docutils literal notranslate"><span class="pre">-pp</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns-path</span></code> [default: input/patterns.txt]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">コマンド: setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">基本コマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">詳細</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">フィールドの指定方法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">テト譜から入力するとき</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">フィールドファイルから入力するとき</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">出力フォーマット</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#html">HTML形式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csv">CSV形式</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">オプション一覧</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#t-tetfu-default"><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetfu</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#p-page-default-1"><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--page</span></code> [default: 1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#p-patterns-default"><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c-combination-default-no"><code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--combination</span></code> [default: no]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#f-fill-default"><code class="docutils literal notranslate"><span class="pre">-f</span></code>, <code class="docutils literal notranslate"><span class="pre">--fill</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#m-margin-default"><code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--margin</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#f-free-default"><code class="docutils literal notranslate"><span class="pre">-F</span></code>, <code class="docutils literal notranslate"><span class="pre">--free</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#l-line-default-1"><code class="docutils literal notranslate"><span class="pre">-l</span></code>, <code class="docutils literal notranslate"><span class="pre">--line</span></code> [default: -1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#h-hold-default-use"><code class="docutils literal notranslate"><span class="pre">-H</span></code>, <code class="docutils literal notranslate"><span class="pre">--hold</span></code> [default: use]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#d-drop-default-softdrop"><code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--drop</span></code> [default: softdrop]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#e-exclude-default-none"><code class="docutils literal notranslate"><span class="pre">-e</span></code>, <code class="docutils literal notranslate"><span class="pre">--exclude</span></code> [default: none]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#op-operate-default"><code class="docutils literal notranslate"><span class="pre">-op</span></code>, <code class="docutils literal notranslate"><span class="pre">--operate</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#np-n-pieces-default-1"><code class="docutils literal notranslate"><span class="pre">-np</span></code>, <code class="docutils literal notranslate"><span class="pre">--n-pieces</span></code> [default: -1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fo-format-default-html"><code class="docutils literal notranslate"><span class="pre">-fo</span></code>, <code class="docutils literal notranslate"><span class="pre">--format</span></code> [default: html]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s-split-default-no"><code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">--split</span></code> [default: no]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#o-output-base-default-output-setup-html"><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output-base</span></code> [default: output/setup.html]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lp-log-path-default-output-last-output-txt"><code class="docutils literal notranslate"><span class="pre">-lp</span></code>, <code class="docutils literal notranslate"><span class="pre">--log-path</span></code> [default: output/last_output.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fp-field-path-default-input-field-txt"><code class="docutils literal notranslate"><span class="pre">-fp</span></code>, <code class="docutils literal notranslate"><span class="pre">--field-path</span></code> [default: input/field.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pp-patterns-path-default-input-patterns-txt"><code class="docutils literal notranslate"><span class="pre">-pp</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns-path</span></code> [default: input/patterns.txt]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ren/main.html">コマンド: ren</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ren/main.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ren/main.html#id2">基本コマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ren/main.html#id3">オプション一覧</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ren/main.html#h-hold-default-use"><code class="docutils literal notranslate"><span class="pre">-H</span></code>, <code class="docutils literal notranslate"><span class="pre">--hold</span></code> [default: use]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ren/main.html#t-tetfu-default"><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetfu</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ren/main.html#p-page-default-1"><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--page</span></code> [default: 1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ren/main.html#p-patterns-default"><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ren/main.html#d-drop-default-softdrop"><code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--drop</span></code> [default: softdrop]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ren/main.html#o-output-base-default-output-ren-html"><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output-base</span></code> [default: output/ren.html]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ren/main.html#lp-log-path-default-output-last-output-txt"><code class="docutils literal notranslate"><span class="pre">-lp</span></code>, <code class="docutils literal notranslate"><span class="pre">--log-path</span></code> [default: output/last_output.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ren/main.html#fp-field-path-default-input-field-txt"><code class="docutils literal notranslate"><span class="pre">-fp</span></code>, <code class="docutils literal notranslate"><span class="pre">--field-path</span></code> [default: input/field.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ren/main.html#pp-patterns-path-default-input-patterns-txt"><code class="docutils literal notranslate"><span class="pre">-pp</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns-path</span></code> [default: input/patterns.txt]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spin/main.html">コマンド: spin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../spin/main.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spin/main.html#id2">基本コマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spin/main.html#id3">オプション一覧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spin/main.html#id4">出力結果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spin/main.html#tips">探索TIPS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#fb-ft">埋めたいライン（<cite>-fb</cite> と <cite>-ft</cite> の間）に、ブロックのない空間が含まれすぎないようにする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#m">マージンの高さ（<cite>-m</cite> の値）を高すぎないようにする</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#mr">屋根に利用できるミノ数（<cite>-mr</cite> の値）を小さくする</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../spin/main.html#id5">現バージョンでは未対応の機能</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#t-tetfu-default"><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetfu</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#p-page-default-1"><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--page</span></code> [default: 1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#p-patterns-default"><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#fb-fill-bottom-default-0"><code class="docutils literal notranslate"><span class="pre">-fb</span></code>, <code class="docutils literal notranslate"><span class="pre">--fill-bottom</span></code> [default: 0]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#ft-fill-top-default-1"><code class="docutils literal notranslate"><span class="pre">-ft</span></code>, <code class="docutils literal notranslate"><span class="pre">--fill-top</span></code> [default: -1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#m-margin-height-default-1"><code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--margin-height</span></code> [default: -1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#c-line-default-2"><code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--line</span></code> [default: 2]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#r-roof-default-yes"><code class="docutils literal notranslate"><span class="pre">-r</span></code>, <code class="docutils literal notranslate"><span class="pre">--roof</span></code> [default: yes]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#mr-max-roof-default-1"><code class="docutils literal notranslate"><span class="pre">-mr</span></code>, <code class="docutils literal notranslate"><span class="pre">--max-roof</span></code> [default: -1]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#s-split-default-no"><code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">--split</span></code> [default: no]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#o-output-base-default-output-ren-html"><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output-base</span></code> [default: output/ren.html]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#lp-log-path-default-output-last-output-txt"><code class="docutils literal notranslate"><span class="pre">-lp</span></code>, <code class="docutils literal notranslate"><span class="pre">--log-path</span></code> [default: output/last_output.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#fp-field-path-default-input-field-txt"><code class="docutils literal notranslate"><span class="pre">-fp</span></code>, <code class="docutils literal notranslate"><span class="pre">--field-path</span></code> [default: input/field.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spin/main.html#pp-patterns-path-default-input-patterns-txt"><code class="docutils literal notranslate"><span class="pre">-pp</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns-path</span></code> [default: input/patterns.txt]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cover/main.html">コマンド: cover</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cover/main.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cover/main.html#id2">基本コマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cover/main.html#id3">入力フォーマット</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#id4">組み方について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#id6">ページ指定について</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cover/main.html#id7">出力フォーマット</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#id8">コンソール表示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#csv">CSV形式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#id9">補足: 置くミノ数とパターンのミノ数</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cover/main.html#id10">オプション一覧</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#t-tetfu-default"><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetfu</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#p-patterns-default"><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#h-hold-default-use"><code class="docutils literal notranslate"><span class="pre">-H</span></code>, <code class="docutils literal notranslate"><span class="pre">--hold</span></code> [default: use]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#d-drop-default-softdrop"><code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--drop</span></code> [default: softdrop]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#m-mirror-default-no"><code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--mirror</span></code> [default: no]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#m-mode-default-normal"><code class="docutils literal notranslate"><span class="pre">-M</span></code>, <code class="docutils literal notranslate"><span class="pre">--mode</span></code> [default: normal]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#p-priority-default-no"><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--priority</span></code> [default: no]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#l-last-sd-default-0"><code class="docutils literal notranslate"><span class="pre">-l</span></code>, <code class="docutils literal notranslate"><span class="pre">--last-sd</span></code> [default: 0]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#o-output-base-default-output-cover-csv"><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output-base</span></code> [default: output/cover.csv]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#lp-log-path-default-output-last-output-txt"><code class="docutils literal notranslate"><span class="pre">-lp</span></code>, <code class="docutils literal notranslate"><span class="pre">--log-path</span></code> [default: output/last_output.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#fp-field-path-default-input-field-txt"><code class="docutils literal notranslate"><span class="pre">-fp</span></code>, <code class="docutils literal notranslate"><span class="pre">--field-path</span></code> [default: input/field.txt]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cover/main.html#pp-patterns-path-default-input-patterns-txt"><code class="docutils literal notranslate"><span class="pre">-pp</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns-path</span></code> [default: input/patterns.txt]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../util/main.html">コマンド: util</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../util/main.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../util/main.html#id2">サブコマンド一覧</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../util/fig.html">サブコマンド: util fig</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../util/fig.html#id1">概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../util/fig.html#id2">テト譜の指定方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../util/fig.html#id3">基本コマンド</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../util/fig.html#id4">カラーテーマ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../util/fig.html#id8">オプション一覧</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../util/fumen.html">サブコマンド: util fumen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../util/fumen.html#id1">概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../util/fumen.html#id2">テト譜の指定方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../util/fumen.html#id3">基本コマンド</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../util/fumen.html#id4">オプション一覧</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow.html">ワークフロー</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workflow.html#id2">このページについて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow.html#tsd-powershell">TSD→パフェの確率を求める [PowerShell]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../caution.html">制限・注意・不具合情報</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../caution.html#id2">このページについて</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../caution.html#percent">percent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../caution.html#path">path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../caution.html#setup">setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../caution.html#ren">ren</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">連絡先</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">solution-finder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>コマンド: setup</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/contents/setup/main.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="setup">
+<h1>コマンド: setup<a class="headerlink" href="#setup" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ある地形から指定したブロックを埋める操作手順をすべて列挙します。</p>
+<p>そのとき、探索時に置いても置かなくても良い場所（マージンエリア）を指定することもできます。</p>
+<p>探索結果は HTMLファイル で出力されます。</p>
+</div>
+<div class="section" id="id2">
+<h2>基本コマンド<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">setup</span> <span class="pre">--tetfu</span> <span class="pre">v115&#64;HhUpxhBeA81hCeA8yhD8AeB8JeAgH</span> <span class="pre">--patterns</span> <span class="pre">*!</span> <span class="pre">--fill</span> <span class="pre">i</span> <span class="pre">--margin</span> <span class="pre">o</span></code></p>
+</div>
+<div class="section" id="id3">
+<h2>詳細<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference internal" href="../../_images/fumen_sample_001.png"><img alt="fumen_sample_001" src="../../_images/fumen_sample_001.png" style="width: 171.0px; height: 69.0px;" /></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">setup</span> <span class="pre">--tetfu</span> <span class="pre">v115&#64;9gTpFeTpFeTpFezhPeAgH</span> <span class="pre">--fill</span> <span class="pre">I</span> <span class="pre">--margin</span> <span class="pre">O</span> <span class="pre">-p</span> <span class="pre">*!</span> <span class="pre">-c</span> <span class="pre">yes</span></code></p>
+<p>はじめに「必ず埋める場所」「マージンエリア」を指定します。</p>
+<p>もしオプションで <code class="docutils literal notranslate"><span class="pre">--fill</span> <span class="pre">I</span> <span class="pre">--margin</span> <span class="pre">O</span></code> を指定した場合、次のように解釈されます。</p>
+<ul class="simple">
+<li><p>水色のエリア → 探索時に必ず埋める必要がある場所</p></li>
+<li><p>黄色のエリア → 探索時に置いても置かなくても良い場所（マージンエリア）</p></li>
+<li><p>グレーのエリア → 既にブロックが固定されたエリア</p></li>
+</ul>
+<p>このとき、下のような結果が得られます。</p>
+<p><a class="reference internal" href="../../_images/solution_sample_001.png"><img alt="solution_sample_001" src="../../_images/solution_sample_001.png" style="width: 171.0px; height: 69.0px;" /></a>
+<a class="reference internal" href="../../_images/solution_sample_002.png"><img alt="solution_sample_002" src="../../_images/solution_sample_002.png" style="width: 171.0px; height: 69.0px;" /></a>
+<a class="reference internal" href="../../_images/solution_sample_003.png"><img alt="solution_sample_003" src="../../_images/solution_sample_003.png" style="width: 171.0px; height: 69.0px;" /></a></p>
+<p>また同時に、下のような結果も得られます。</p>
+<p><a class="reference internal" href="../../_images/solution_sample_004.png"><img alt="solution_sample_004" src="../../_images/solution_sample_004.png" style="width: 171.0px; height: 69.0px;" /></a></p>
+<p>このような「穴」が含まれる地形を取り除く場合は <code class="docutils literal notranslate"><span class="pre">--exclude</span></code> を設定してください。
+<code class="docutils literal notranslate"><span class="pre">--exclude</span></code> を設定することで、マージンエリアを含めて地形全体のどこかに「穴」のある解が
+除外されます。</p>
+<p>もし <code class="docutils literal notranslate"><span class="pre">--exclude</span></code> を設定しつつも、「穴」を許容するエリアを指定したい場合は <code class="docutils literal notranslate"><span class="pre">--free</span></code> で色を指定し、その色で地形を塗ってください。</p>
+<hr class="docutils" />
+<p>次に、下の地形をもとに説明します。</p>
+<p><a class="reference internal" href="../../_images/fumen_sample_002.png"><img alt="fumen_sample_002" src="../../_images/fumen_sample_002.png" style="width: 171.0px; height: 69.0px;" /></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">setup</span> <span class="pre">--tetfu</span> <span class="pre">v115&#64;9gQpBewhVpwhCe3hAe2hZpJeAgH</span> <span class="pre">--patterns</span> <span class="pre">[^T]!</span> <span class="pre">--fill</span> <span class="pre">I</span> <span class="pre">--margin</span> <span class="pre">O</span> <span class="pre">-c</span> <span class="pre">yes</span></code></p>
+<p>このとき、下のようなT以外のミノを使ってできる地形が列挙されます。</p>
+<p><a class="reference internal" href="../../_images/solution_sample_005.png"><img alt="solution_sample_005" src="../../_images/solution_sample_005.png" style="width: 171.0px; height: 69.0px;" /></a>
+<a class="reference internal" href="../../_images/solution_sample_006.png"><img alt="solution_sample_006" src="../../_images/solution_sample_006.png" style="width: 171.0px; height: 69.0px;" /></a></p>
+<p>この解にはどちらも「穴」が含まれているため、そのまま <code class="docutils literal notranslate"><span class="pre">--exclude</span></code> を設定するとどちらの解も除外されてしまいます。</p>
+<p>それを防ぐため、解が除外される前に「ミノを置く」「1ライン全て埋める」などの操作を行うことができます。
+詳細は  <code class="docutils literal notranslate"><span class="pre">--operate</span></code> オプションをご参照ください。</p>
+<p>この例では <code class="docutils literal notranslate"><span class="pre">--operate</span> <span class="pre">&quot;T-Reverse(2,2)&quot;</span></code> で1つめの解を取り出すことができます。</p>
+<hr class="docutils" />
+<p>最後に、入力パターン <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> について補足します。</p>
+<p>デフォルトでは <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> で入力したミノは「ミノ順」として解釈されます。</p>
+<p>このとき、解にはすべてのミノを使用した解が表示されます。
+また、ミノ順の関係で組むことができない解は表示されません。</p>
+<p>たとえば パターンに <code class="docutils literal notranslate"><span class="pre">IOOI</span></code> を指定したとき、2つめのI は O より後に置かれます。</p>
+<p>もし、この入力パターンを「ミノの組み合わせ」として解釈したい場合は <code class="docutils literal notranslate"><span class="pre">--combination</span> <span class="pre">yes</span></code> を設定してください。
+たとえば、パターンに <code class="docutils literal notranslate"><span class="pre">IOOI</span></code> を指定したとき、置く順番に関わらず I2個・O2個 を使用した解が表示されます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">--combination</span> <span class="pre">yes</span></code> のときに表示される解は「必ず埋めるエリア <code class="docutils literal notranslate"><span class="pre">--fill</span></code>」をカバーする最小限のミノが表示されます。
+置くミノの個数を固定したい場合は <code class="docutils literal notranslate"><span class="pre">--n-pieces</span></code> を設定してください。</p>
+</div>
+<div class="section" id="id4">
+<h2>フィールドの指定方法<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id5">
+<h3>テト譜から入力するとき<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><a class="reference internal" href="../../_images/fumen_sample_003.png"><img alt="fumen_sample_003" src="../../_images/fumen_sample_003.png" style="width: 171.0px; height: 69.0px;" /></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">setup</span> <span class="pre">-t</span> <span class="pre">v115&#64;9gV4whCe1hCeA82hAeB8XpA8KeAgH</span> <span class="pre">--fill</span> <span class="pre">I</span> <span class="pre">--margin</span> <span class="pre">O</span> <span class="pre">--free</span> <span class="pre">S</span> <span class="pre">-p</span> <span class="pre">[^T]!</span> <span class="pre">-op</span> <span class="pre">&quot;T-Reverse(7,2)&quot;</span> <span class="pre">-e</span> <span class="pre">holes</span></code></p>
+<p>オプションで「必ず埋める場所」「マージンエリア」「フリーエリア」の色を指定してください。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-f</span></code> or <code class="docutils literal notranslate"><span class="pre">--fill</span></code> → 探索時に必ず埋める必要がある場所</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-m</span></code> or <code class="docutils literal notranslate"><span class="pre">--margin</span></code> → 探索時に置いても置かなくても良い場所（マージンエリア。<code class="docutils literal notranslate"><span class="pre">exclude</span></code> 設定時には穴を許容しない）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-F</span></code> or <code class="docutils literal notranslate"><span class="pre">--free</span></code> → マージンエリア かつ 常に穴を許容するエリア</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>フィールドファイルから入力するとき<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>入力例</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">++++++*</span><span class="n">___</span>
+<span class="o">******</span><span class="n">___X</span>
+<span class="o">*******</span><span class="n">_XX</span>
+<span class="o">........</span><span class="n">X_</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">setup</span> <span class="pre">--patterns</span> <span class="pre">[^T]!</span> <span class="pre">--operate</span> <span class="pre">&quot;T-Reverse(7,2)&quot;</span> <span class="pre">--exclude</span> <span class="pre">holes</span></code></p>
+<p>通常のフィールドの定義に「必ず埋める場所」「マージンエリア」を指定します。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> → 探索時に必ず埋める必要がある場所</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.</span></code> → 探索時に置いても置かなくても良い場所（マージンエリア。<code class="docutils literal notranslate"><span class="pre">--exclude</span></code> 設定時には穴を許容しない）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> → マージンエリア かつ 常に穴を許容するエリア</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>フィールドファイル1行目の数字は必須ではありません。
+もし数字を記載した場合は <code class="docutils literal notranslate"><span class="pre">--line</span></code> オプションとして解釈されます。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>出力フォーマット<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>出力フォーマットは、以下の方式から選択できます。
+変更したい場合は、オプションから変更できます。</p>
+<ul class="simple">
+<li><p>html: シンプルなHTML形式のテト譜リンク</p></li>
+<li><p>csv: csv形式（詳細は後述）</p></li>
+</ul>
+<div class="section" id="html">
+<h3>HTML形式<a class="headerlink" href="#html" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>サンプル</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>2202433332
+
+__________
+____X_____
+____XXXXX_
+XX_XXXXXXX
+XX_XXXXXXX
+
+ZIOSLJT [462] (Link: http://fumen.zui.jp/?v115@5gwwGeg0ywFeg0ilQ4AeRpAeh0glBtR4RpAezhBtQ4?JeAgWHAauytCs/1BA)
+ZIOSLJT [455] (Link: http://fumen.zui.jp/?v115@8gwwDeg0CexwDeg0ilQ4wwRpAeh0glBtR4RpAezhBt?Q4JeAgWHAauytCs/1BA)
+ZIOSLJT [357] (Link: http://fumen.zui.jp/?v115@6gwwFeg0AeywEeg0ilQ4AeRpAeh0glBtR4RpAezhBt?Q4JeAgWHAauytCs/1BA)
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">2202433332</span></code> の数字は、列ごとのブロック数を左から並べたものです。</p>
+<p>数字の下の <code class="docutils literal notranslate"><span class="pre">____X_____〜</span></code> は、地形を簡易的に表示したものです。
+ここには <code class="docutils literal notranslate"><span class="pre">--fill</span></code> をカバーする最低限の地形が表示されます。</p>
+<p>地形の下の <code class="docutils literal notranslate"><span class="pre">ミノ順＋リンク</span></code> は、テト譜へのリンクを表示しています。
+もし「<code class="docutils literal notranslate"><span class="pre">--combination</span></code> がオフ」 or 「<code class="docutils literal notranslate"><span class="pre">--n-pieces</span></code> が設定されている」ときは、すべてのミノを利用したテト譜が表示されます。
+したがって「テト譜」と「簡易的な地形表示」が異なる場合があります。ご注意ください。</p>
+<p>リンクの後ろの数字 (462, ...) はこの地形を積み込む手順の総数で、入力パターンには依存しません。
+手順は同じ種類のミノが複数個あっても、置く場所によってそれぞれ区別されます。
+たとえば <a class="reference external" href="http://fumen.zui.jp/?v115&#64;QhwwAewwCewwBe0wAeywBewwJeAgH">T3個だけを使う地形</a> の場合、3!=6 通り となります。</p>
+</div>
+<div class="section" id="csv">
+<h3>CSV形式<a class="headerlink" href="#csv" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>地形をキーして、それぞれの地形で使用されるミノとその地形を組む全手順数を出力します。</p>
+<p>出力例) <code class="docutils literal notranslate"><span class="pre">setup</span> <span class="pre">-p</span> <span class="pre">*!</span> <span class="pre">--fill</span> <span class="pre">i</span> <span class="pre">--margin</span> <span class="pre">o</span> <span class="pre">-t</span> <span class="pre">v115&#64;2gWpCeWpDe0hQpxhAe4hAe2hJeAgH</span> <span class="pre">--format</span> <span class="pre">csv</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>地形,使用ミノ,手順数
+http://fumen.zui.jp/?v115@4gAtHeBtBewwEeAtglQ4xwg0RpAeilR4wwg0RpAezh?Q4h0JeAgWHAKNmFDMuqBA,JSTZLIO,420
+</pre></div>
+</div>
+<p>各項目は、左から順に以下の通りです。
+以下の 例) は、上記の結果を基づいた説明になります。</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>テト譜</dt><dd><ul>
+<li><p>地形を表すテト譜</p></li>
+<li><dl class="simple">
+<dt>例)</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">http://fumen.zui.jp/?v115&#64;4gAtHeBtBewwEeAtglQ4xwg0RpAeilR4wwg0RpAezh?Q4h0JeAgWHAKNmFDMuqBA</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>使用ミノ</dt><dd><ul>
+<li><p>その地形で使用するミノの組み合わせ</p></li>
+<li><dl class="simple">
+<dt>例)</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">JSTZLIO</span></code> JSTZLIOの7ミノを使った地形である</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>手順数</dt><dd><ul>
+<li><p>その地形を積み込む手順の総数で、入力パターンには依存しません。</p></li>
+<li><dl class="simple">
+<dt>手順は同じ種類のミノが複数個あっても、置く場所によってそれぞれ区別されます</dt><dd><ul>
+<li><p>たとえば <a class="reference external" href="http://fumen.zui.jp/?v115&#64;QhwwAewwCewwBe0wAeywBewwJeAgH">T3個だけを使う地形</a> の場合、3!=6 通り となります</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>例)</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">420</span></code> その地形を組む手順が 420通り</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>オプション一覧<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 42%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>short</p></th>
+<th class="head"><p>long</p></th>
+<th class="head"><p>default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-t</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--tetfu</span></code></p></td>
+<td><p>なし</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-P</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--page</span></code></p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-p</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--patterns</span></code></p></td>
+<td><p>なし</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-c</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--combination</span></code></p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-f</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--fill</span></code></p></td>
+<td><p>なし</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-m</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--margin</span></code></p></td>
+<td><p>なし</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-F</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--free</span></code></p></td>
+<td><p>なし</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--line</span></code></p></td>
+<td><p>-1</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-H</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--hold</span></code></p></td>
+<td><p>use</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-d</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--drop</span></code></p></td>
+<td><p>softdrop</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-e</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--exclude</span></code></p></td>
+<td><p>none</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-op</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--operate</span></code></p></td>
+<td><p>なし</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-np</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--n-pieces</span></code></p></td>
+<td><p>-1</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-fo</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--format</span></code></p></td>
+<td><p>html</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-s</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--split</span></code></p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-o</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--output-base</span></code></p></td>
+<td><p>output/path.txt</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-lp</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--log-path</span></code></p></td>
+<td><p>output/last_output.txt</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-fp</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--field-path</span></code></p></td>
+<td><p>input/field.txt</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-pp</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--patterns-path</span></code></p></td>
+<td><p>input/patterns.txt</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="t-tetfu-default">
+<h3><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetfu</span></code> [default: なし]<a class="headerlink" href="#t-tetfu-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>フィールドやオプションなどを指定したテト譜データを指定する。</p>
+<p>テト譜で探索条件を指定する場合は <code class="docutils literal notranslate"><span class="pre">--tetfu</span> <span class="pre">v115&#64;vhAAgH</span></code> のように指定する。</p>
+<p>v115のテト譜データにのみ対応。</p>
+</div>
+<div class="section" id="p-page-default-1">
+<h3><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--page</span></code> [default: 1]<a class="headerlink" href="#p-page-default-1" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>テト譜でロードするページを指定する。</p>
+<p>ページを変更したい場合は <code class="docutils literal notranslate"><span class="pre">--page</span> <span class="pre">31</span></code> のように指定する。</p>
+</div>
+<div class="section" id="p-patterns-default">
+<h3><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]<a class="headerlink" href="#p-patterns-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>探索したいミノのパターンを指定する。</p>
+<p>パターンを変更したい場合は <code class="docutils literal notranslate"><span class="pre">--pattern</span> <span class="pre">*p7</span></code> のように指定する。</p>
+<p>もし <code class="docutils literal notranslate"><span class="pre">--combination</span></code> が設定されていない場合は「ミノ順」として、設定されているときは「ミノの組み合わせ」として解釈されます。</p>
+</div>
+<div class="section" id="c-combination-default-no">
+<h3><code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--combination</span></code> [default: no]<a class="headerlink" href="#c-combination-default-no" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">yes</span></code> を指定した場合、入力されたパターンを「ミノ順」ではなく「ミノの組み合わせ」として解釈します。</p>
+<p>たとえば パターンに <code class="docutils literal notranslate"><span class="pre">IOOI</span></code> を指定したとき、</p>
+<p><code class="docutils literal notranslate"><span class="pre">no</span></code> では、2つめのI は O より後に置く必要がありますが、</p>
+<p><code class="docutils literal notranslate"><span class="pre">yes</span></code> では、置く順番に関わらず I2個・O2個 を使用した解が表示されます。</p>
+</div>
+<div class="section" id="f-fill-default">
+<h3><code class="docutils literal notranslate"><span class="pre">-f</span></code>, <code class="docutils literal notranslate"><span class="pre">--fill</span></code> [default: なし]<a class="headerlink" href="#f-fill-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>フィールドをテト譜から入力するとき、必ず埋めるエリアとするブロックの色を指定する。</p>
+<p>このオプションで指定した色が、探索時に必ず任意のミノを置く場所と解釈されます。
+なお、色は <code class="docutils literal notranslate"><span class="pre">TOI</span></code> のように複数個同時に指定できます。</p>
+<p>色の指定値は、以下のようになります（大文字・小文字はどちらでも良い）。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">I</span></code> or <code class="docutils literal notranslate"><span class="pre">cyan</span></code> or <code class="docutils literal notranslate"><span class="pre">cy</span></code> → Iブロック</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> or <code class="docutils literal notranslate"><span class="pre">blue</span></code> or <code class="docutils literal notranslate"><span class="pre">bl</span></code> → Jブロック</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> or <code class="docutils literal notranslate"><span class="pre">orange</span></code> or <code class="docutils literal notranslate"><span class="pre">or</span></code> → Lブロック</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">O</span></code> or <code class="docutils literal notranslate"><span class="pre">yellow</span></code> or <code class="docutils literal notranslate"><span class="pre">ye</span></code> → Oブロック</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">S</span></code> or <code class="docutils literal notranslate"><span class="pre">green</span></code> or <code class="docutils literal notranslate"><span class="pre">gr</span></code> → Sブロック</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Z</span></code> or <code class="docutils literal notranslate"><span class="pre">red</span></code> or <code class="docutils literal notranslate"><span class="pre">re</span></code> → Zブロック</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code> or <code class="docutils literal notranslate"><span class="pre">purple</span></code> or <code class="docutils literal notranslate"><span class="pre">pu</span></code> → Tブロック</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">none</span></code> → 指定なし（マージンエリアなし）</p></li>
+</ul>
+</div>
+<div class="section" id="m-margin-default">
+<h3><code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--margin</span></code> [default: なし]<a class="headerlink" href="#m-margin-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>フィールドをテト譜から入力するとき、マージンエリアとするブロックの色を指定する。</p>
+<p>このオプションで指定した色が、探索時に置いても置かなくても良い場所と解釈されます。</p>
+<p>もし <code class="docutils literal notranslate"><span class="pre">--exclude</span></code> オプションが指定されているとき、このエリア内の穴は除外対象となります。</p>
+<p>色の指定値は <code class="docutils literal notranslate"><span class="pre">--fill</span></code> オプションを参照してください。</p>
+</div>
+<div class="section" id="f-free-default">
+<h3><code class="docutils literal notranslate"><span class="pre">-F</span></code>, <code class="docutils literal notranslate"><span class="pre">--free</span></code> [default: なし]<a class="headerlink" href="#f-free-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>フィールドをテト譜から入力するとき、マージンエリアとするブロックの色を指定する。</p>
+<p>このオプションで指定した色が、探索時に置いても置かなくても良い場所と解釈されます。</p>
+<p>もし <code class="docutils literal notranslate"><span class="pre">--exclude</span></code> オプションが指定されている場合でも、このエリア内の穴は除外対象となりません。</p>
+<p>色の指定値は <code class="docutils literal notranslate"><span class="pre">--fill</span></code> オプションを参照してください。</p>
+</div>
+<div class="section" id="l-line-default-1">
+<h3><code class="docutils literal notranslate"><span class="pre">-l</span></code>, <code class="docutils literal notranslate"><span class="pre">--line</span></code> [default: -1]<a class="headerlink" href="#l-line-default-1" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>入力するフィールドの最大ライン数（高さ）を指定する。</p>
+<p>指定したライン数よりも上にあるブロックは無視されます。</p>
+<p>なお <code class="docutils literal notranslate"><span class="pre">-1</span></code> を指定した場合は <code class="docutils literal notranslate"><span class="pre">最も高いフィールドの高さ</span></code> が自動的に設定される。</p>
+</div>
+<div class="section" id="h-hold-default-use">
+<h3><code class="docutils literal notranslate"><span class="pre">-H</span></code>, <code class="docutils literal notranslate"><span class="pre">--hold</span></code> [default: use]<a class="headerlink" href="#h-hold-default-use" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ホールドの有無を指定する。</p>
+<p>ホールドなしで探索する場合は <code class="docutils literal notranslate"><span class="pre">--hold</span> <span class="pre">avoid</span></code> を指定する。</p>
+</div>
+<div class="section" id="d-drop-default-softdrop">
+<h3><code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--drop</span></code> [default: softdrop]<a class="headerlink" href="#d-drop-default-softdrop" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ミノの操作に制限を加える。</p>
+<p>以下から操作方法をひとつ選択する。</p>
+<ul class="simple">
+<li><p>softdrop: ソフトドロップ＋回転入れ（制限なし）</p></li>
+<li><p>harddrop: ハードドロップのみ</p></li>
+<li><p>180: ソフトドロップ＋180度回転入れ。180度回転は <a class="reference external" href="https://github.com/nullpomino/nullpomino">Nullpomino</a> のStandard Wallkickに準拠します。</p></li>
+<li><p>t-softdrop: Tミノはソフトドロップ、その他のミノはハードドロップ</p></li>
+</ul>
+</div>
+<div class="section" id="e-exclude-default-none">
+<h3><code class="docutils literal notranslate"><span class="pre">-e</span></code>, <code class="docutils literal notranslate"><span class="pre">--exclude</span></code> [default: none]<a class="headerlink" href="#e-exclude-default-none" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>地形に「穴」が含まれる解を除外します。</p>
+<p>除外する対象をひとつ選択してください。</p>
+<ul class="simple">
+<li><p>holes: ある空白ブロックに対して、その上にブロックがあれば「穴」として除外する（横に隙間がある場合でも除外されます）</p></li>
+<li><p>strict-holes: ある空白ブロックに対して、どうやっても到達できない場合は「穴」として除外する（四方がブロックで囲まれているとき）</p></li>
+<li><p>none: 除外なし</p></li>
+</ul>
+</div>
+<div class="section" id="op-operate-default">
+<h3><code class="docutils literal notranslate"><span class="pre">-op</span></code>, <code class="docutils literal notranslate"><span class="pre">--operate</span></code> [default: なし]<a class="headerlink" href="#op-operate-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>除外対象を決定する前に、解の地形に対して操作を行う。</p>
+<p>ここでの操作は、あくまで <code class="docutils literal notranslate"><span class="pre">--exclude</span></code> の判定 に利用するためであり、解の表示には影響は与えません。</p>
+<p>以下の操作を指定することができます。</p>
+<ul class="simple">
+<li><p>1ブロックを置く</p>
+<ul>
+<li><p>block(1,2)：(x=1,y=2)にブロックを置く</p></li>
+</ul>
+</li>
+<li><p>ミノを置く</p>
+<ul>
+<li><p>I-Spawn(1,0)：出現時の回転のIミノを、回転軸(x=1,y=0)に置く</p></li>
+<li><p>T-Reverse(4,2)：裏返したTミノを回転軸(x=4,y=2)に置く</p></li>
+<li><p>L-Right(0,1)：右回転Lミノを回転軸(x=0,y=1)に置く</p></li>
+<li><p>J-Left(9,1)：左回転Jミノを回転軸(x=9,y=1)に置く</p></li>
+</ul>
+</li>
+<li><p>1ラインすべてを埋める</p>
+<ul>
+<li><p>row(1)：2段目をすべてブロックで埋める。この時点でライン消去はされません</p></li>
+</ul>
+</li>
+<li><p>ライン消去を行う</p>
+<ul>
+<li><p>clear()：ブロックで埋まっているラインを消去する</p></li>
+</ul>
+</li>
+</ul>
+<p>座標は左下のブロックが (0,0) となります。</p>
+<p>ミノの回転軸は <a class="reference external" href="https://harddrop.com/wiki/SRS#How_Guideline_SRS_Really_Works">SRS / How Guideline SRS Really Works</a> の回転軸に準拠しています。</p>
+<p>すべての操作が終わった後、自動的にライン消去（clear()）が行われます</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>複数個の操作を指定した場合は、先頭の操作から順に行われます。</p>
+<p>例）--operate &quot;L-Right(0,1)&quot; &quot;row(1)&quot; &quot;clear()&quot; &quot;block(1,1)&quot;</p>
+<p><a class="reference external" href="http://fumen.zui.jp/?v115&#64;vhAKJYYAF7IVCNbNyDIP98AYo78ADq78A5nY9ARhg0?I8TeAAPQAF7YVEvT98A4p78A5nY9AvhAAAPRAF7wiDs4DXE?FbuRAy178ASAAAAShA8beAAPWAF7YfDsng/DFbO6AFLn6AF?rwRASbAAARhg0Ieh0ReAAPGASY0hEM/BAA">結果</a>：右回転Lを置く→2段目をすべて埋める→ライン消去を行う→(1,1)にブロックを置く</p>
+</div>
+</div>
+<div class="section" id="np-n-pieces-default-1">
+<h3><code class="docutils literal notranslate"><span class="pre">-np</span></code>, <code class="docutils literal notranslate"><span class="pre">--n-pieces</span></code> [default: -1]<a class="headerlink" href="#np-n-pieces-default-1" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>解で使用されるミノの個数を指定する。</p>
+<p>もし <code class="docutils literal notranslate"><span class="pre">-1</span></code> を指定した場合は自動で設定されます。（<code class="docutils literal notranslate"><span class="pre">--combination</span></code> がオンのとき固定なし、オフのときはpatterns・地形に従う）</p>
+</div>
+<div class="section" id="fo-format-default-html">
+<h3><code class="docutils literal notranslate"><span class="pre">-fo</span></code>, <code class="docutils literal notranslate"><span class="pre">--format</span></code> [default: html]<a class="headerlink" href="#fo-format-default-html" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>以下の出力フォーマットのうち、ひとつを指定する。</p>
+<ul class="simple">
+<li><p>html</p></li>
+<li><p>csv</p></li>
+</ul>
+</div>
+<div class="section" id="s-split-default-no">
+<h3><code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">--split</span></code> [default: no]<a class="headerlink" href="#s-split-default-no" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>出力フォーマットがlinkのときに出力されるテト譜で、手順を1ミノずつ分割するか指定する。</p>
+<p>ただし <code class="docutils literal notranslate"><span class="pre">yes</span></code> で生成されるテト譜はあくまで置き場所を示すものであり、ページ順通りに置くとミノが空中に浮いたり、移動できない場所に置かれることもあります。</p>
+<ul class="simple">
+<li><p>yes: 1ページにつき1ミノずつ表示される形で出力</p></li>
+<li><p>no: すべてのミノが1ページに納まった形で出力</p></li>
+</ul>
+</div>
+<div class="section" id="o-output-base-default-output-setup-html">
+<h3><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output-base</span></code> [default: output/setup.html]<a class="headerlink" href="#o-output-base-default-output-setup-html" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>出力結果を保存するファイルのパスを指定する。</p>
+</div>
+<div class="section" id="lp-log-path-default-output-last-output-txt">
+<h3><code class="docutils literal notranslate"><span class="pre">-lp</span></code>, <code class="docutils literal notranslate"><span class="pre">--log-path</span></code> [default: output/last_output.txt]<a class="headerlink" href="#lp-log-path-default-output-last-output-txt" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>実行時のログを保存するファイルのパスを指定する。</p>
+</div>
+<div class="section" id="fp-field-path-default-input-field-txt">
+<h3><code class="docutils literal notranslate"><span class="pre">-fp</span></code>, <code class="docutils literal notranslate"><span class="pre">--field-path</span></code> [default: input/field.txt]<a class="headerlink" href="#fp-field-path-default-input-field-txt" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>フィールドを定義するファイルのパスを指定する。</p>
+</div>
+<div class="section" id="pp-patterns-path-default-input-patterns-txt">
+<h3><code class="docutils literal notranslate"><span class="pre">-pp</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns-path</span></code> [default: input/patterns.txt]<a class="headerlink" href="#pp-patterns-path-default-input-patterns-txt" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>探索の組み合わせパターンを定義するファイルのパスを指定する。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ren/main.html" class="btn btn-neutral float-right" title="コマンド: ren" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../path/csv.html" class="btn btn-neutral float-left" title="key: none" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, newjade
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
