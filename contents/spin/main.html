@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>コマンド: spin &mdash; solution-finder 0.950 ドキュメント</title>
+  <title>コマンド: spin &mdash; solution-finder 0.960 ドキュメント</title>
   
 
   
@@ -258,7 +258,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#mr">屋根に利用できるミノ数（<cite>-mr</cite> の値）を小さくする</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">現バージョンでは未対応の機能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id7">現バージョンでは未対応の機能</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#t-tetfu-default"><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetfu</span></code> [default: なし]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#p-page-default-1"><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--page</span></code> [default: 1]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#p-patterns-default"><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]</a></li>
@@ -269,6 +269,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#r-roof-default-yes"><code class="docutils literal notranslate"><span class="pre">-r</span></code>, <code class="docutils literal notranslate"><span class="pre">--roof</span></code> [default: yes]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mr-max-roof-default-1"><code class="docutils literal notranslate"><span class="pre">-mr</span></code>, <code class="docutils literal notranslate"><span class="pre">--max-roof</span></code> [default: -1]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#s-split-default-no"><code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">--split</span></code> [default: no]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#f-filter-default-strict"><code class="docutils literal notranslate"><span class="pre">-f</span></code>, <code class="docutils literal notranslate"><span class="pre">--filter</span></code> [default: strict]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#o-output-base-default-output-ren-html"><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output-base</span></code> [default: output/ren.html]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lp-log-path-default-output-last-output-txt"><code class="docutils literal notranslate"><span class="pre">-lp</span></code>, <code class="docutils literal notranslate"><span class="pre">--log-path</span></code> [default: output/last_output.txt]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fp-field-path-default-input-field-txt"><code class="docutils literal notranslate"><span class="pre">-fp</span></code>, <code class="docutils literal notranslate"><span class="pre">--field-path</span></code> [default: input/field.txt]</a></li>
@@ -475,19 +476,23 @@
 <td><p><code class="docutils literal notranslate"><span class="pre">--split</span></code></p></td>
 <td><p>no</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-o</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-f</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--filter</span></code></p></td>
+<td><p>strict</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-o</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">--output-base</span></code></p></td>
 <td><p>output/path.txt</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-fp</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-fp</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">--field-path</span></code></p></td>
 <td><p>input/field.txt</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-pp</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-pp</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">--patterns-path</span></code></p></td>
 <td><p>input/patterns.txt</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-lp</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-lp</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">--log-path</span></code></p></td>
 <td><p>output/last_output.txt</p></td>
 </tr>
@@ -501,12 +506,15 @@
 <li><dl class="simple">
 <dt>先頭のマーク</dt><dd><ul>
 <li><p><cite>O</cite> = 実際にTスピンできる</p></li>
-<li><p><cite>X</cite> = Tミノを除いた地形を組むことができるが、Tミノの回転入れができない</p></li>
-<li><p><cite>-</cite> = Tミノを除いた地形が組めない</p></li>
+<li><p><cite>X</cite> = Tミノ以外は組むことができるが、Tミノが到達できない位置にある</p></li>
+<li><p><cite>-</cite> = そのままでは置けないミノを含む手順である (Tミノも含む)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
+</ul>
+<p>※ <a href="#id5"><span class="problematic" id="id6">`</span></a>--filter`オプションで、このマークにごとに解を制限できます</p>
+<ul class="simple">
 <li><p>ミノの方向</p></li>
 <li><p>clear = Tスピン以外も含めて消去されたライン数</p></li>
 <li><p>hole = Tスピン後の地形の穴の数（横穴も含む）</p></li>
@@ -545,8 +553,8 @@
 その点について、ご注意ください。</p>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>現バージョンでは未対応の機能<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id7">
+<h2>現バージョンでは未対応の機能<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <ul class="simple">
 <li><p>地形を削らないとTスピンできないケース <a class="reference external" href="http://tinyurl.com/y2anl6g3">サンプル</a></p></li>
 <li><dl class="simple">
@@ -626,6 +634,16 @@ y座標は、一番下の段を <cite>0</cite> とする。</p>
 <ul class="simple">
 <li><p>yes: 1ページにつき1ミノずつ表示される形で出力</p></li>
 <li><p>no: すべてのミノが1ページに納まった形で出力</p></li>
+</ul>
+</div>
+<div class="section" id="f-filter-default-strict">
+<h3><code class="docutils literal notranslate"><span class="pre">-f</span></code>, <code class="docutils literal notranslate"><span class="pre">--filter</span></code> [default: strict]<a class="headerlink" href="#f-filter-default-strict" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>解の先頭に表示されているマークに従って、表示する解を制限します。</p>
+<p>指定できる値は以下の通りです。</p>
+<ul class="simple">
+<li><p>strict: Tスピンできる解のみを表示します（<cite>[O]</cite> のみに相当）`</p></li>
+<li><p>ignore-t: Tミノ以外は組むことができる解を表示します。Tミノが実際に到達できるかは問いません。ただし、地面に触れている必要はあります（<cite>[O]</cite> と <cite>[X]</cite> に相当）`</p></li>
+<li><p>none: 表示する解を制限しません</p></li>
 </ul>
 </div>
 <div class="section" id="o-output-base-default-output-ren-html">
