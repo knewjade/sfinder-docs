@@ -252,13 +252,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#id2">基本コマンド</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">オプション一覧</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">出力結果</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tips">探索TIPS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#fb-ft">埋めたいライン（<cite>-fb</cite> と <cite>-ft</cite> の間）に、ブロックのない空間が含まれすぎないようにする</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#m">マージンの高さ（<cite>-m</cite> の値）を高すぎないようにする</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mr">屋根に利用できるミノ数（<cite>-mr</cite> の値）を小さくする</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">現バージョンでは未対応の機能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id7">設定値について</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">現バージョンでは未対応の機能</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#t-tetfu-default"><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetfu</span></code> [default: なし]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#p-page-default-1"><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--page</span></code> [default: 1]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#p-patterns-default"><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]</a></li>
@@ -521,40 +516,39 @@
 <li><p>piece = その解で使われたミノ数</p></li>
 </ul>
 </div>
-<div class="section" id="tips">
-<h2>探索TIPS<a class="headerlink" href="#tips" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>このコマンドは、設定値次第では探索にかなり時間がかかる可能性があります。
-そこで設定値を、以下の大まかな傾向をもとに調整していただくことをオススメします。</p>
-<p><a class="reference internal" href="../../_images/option_001.png"><img alt="option_001" src="../../_images/option_001.png" style="width: 342.0px; height: 376.0px;" /></a></p>
-<div class="section" id="fb-ft">
-<h3>埋めたいライン（<cite>-fb</cite> と <cite>-ft</cite> の間）に、ブロックのない空間が含まれすぎないようにする<a class="headerlink" href="#fb-ft" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>ブロックがほとんど置かれていないラインを探索範囲に含めると、ミノの置きかたの選択肢が増えるため、実行時間も増えていきます。
-実際に探索範囲を大きくしても、範囲に比例して実用性のない置き方の解も増えていくため、ほとんどのケースでメリットが少ないと思われます。
-そのため、ある程度予測して、埋めたいラインを選択すると良いと思います。</p>
-</div>
-<div class="section" id="m">
-<h3>マージンの高さ（<cite>-m</cite> の値）を高すぎないようにする<a class="headerlink" href="#m" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Tスピンをつくるには屋根が必要になるため、Tより上にブロックを置かないといけないケースが存在します。
-そのため、探索範囲の上の方（<cite>-ft</cite> 付近）にTミノを置く場合、その屋根をつけるためのスペースをマージンの高さで指定します。</p>
-<p>しかし、Tスピン用の屋根をつけるとTミノが入らなくなる可能性があるため、さらに回転入れ用の屋根が必要になることもあります。
-この回転入れ用の屋根をみつけるのは難しく、マージンの高さに比例して実行時間が増えていきます。</p>
-<p>デフォルトでは <cite>-ftの値 + 2</cite> になっていますが、この値を大きくする場合はご注意ください。</p>
-</div>
-<div class="section" id="mr">
-<h3>屋根に利用できるミノ数（<cite>-mr</cite> の値）を小さくする<a class="headerlink" href="#mr" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>もしラインを埋めるのに必要なミノが少ないと、残りのミノはすべて屋根（＆足場）に使えることになります。
-その結果、Tミノを回転入れするために必要な屋根の探索に時間がかかることになります。
-しかしながら屋根のミノが多い地形は、探索時間がかかる割にミノ順の制限が厳しく、有用な解となりにくいです。
-そのため、解が一部制限されてしまいますが、通常時は屋根のミノを減らすことをオススメします。</p>
-<p><cite>-mr 1</cite> と指定すると、1ミノ置いてTミノが回転入れできるようになる解までが表示されます。
-<cite>-mr 0</cite> と指定すると、何もしなくても回転入れできる解だけが表示されます。</p>
-<p>似たオプションとして <cite>-r no</cite> で屋根の探索をスキップでき、このオプションでも探索速度は早くなります。
-<cite>-mr</cite> と異なり、屋根の探索をそのものをスキップするため、そのままでは組めない地形も多く含まれます。
-その点について、ご注意ください。</p>
-</div>
-</div>
 <div class="section" id="id7">
-<h2>現バージョンでは未対応の機能<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>設定値について<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>このコマンドは、設定値によって探索にかかる時間が大きく変わります。
+ここでは、探索時間を調整するための基本的な方針を紹介します。</p>
+<ol class="arabic simple">
+<li><p>Tスピンをつくる範囲をなるべく狭くする</p></li>
+</ol>
+<p>Spinコマンドでは、<cite>-fb</cite> と <cite>-ft</cite> の間の段でTスピンをつくります。
+この  <cite>-fb</cite> と <cite>-ft</cite> の差が大きかったり、ブロックがないラインを選ぶほど、
+つくれるTスピンの数は増えていきます。</p>
+<p>それにあわせて実行する時間も増えていくため、
+ある程度つくりたいTスピンを予測して、なるべく範囲が狭くなるように指定するのをおすすめします。</p>
+<ol class="arabic simple" start="2">
+<li><p>「マージン」の範囲をなるべく狭くする</p></li>
+</ol>
+<p>Spinコマンドでの「マージン」とは、Tスピンの屋根や回転入れのためのミノを置いても良い範囲のことです。</p>
+<p>「Tスピンの屋根や回転入れのためのミノ」をみつけるのは難しく、Tスピン自体をみつけるよりも時間がかかります。</p>
+<p>そのため、マージンの高さ（<cite>-m</cite> の値）を小さくしたり、ブロックのない範囲が広くならないようにしたりしてください。</p>
+<ol class="arabic simple" start="3">
+<li><p>屋根に利用できるミノ数を少なくする</p></li>
+</ol>
+<p>2ではマージンの範囲を狭くしましたが、マージンに置くミノの最大数（<cite>-mr</cite> の値）を小さくしても実行時間は短くなります。</p>
+<p>たとえば <cite>-mr 1</cite> と指定すると、最低限のTスピンの形からさらに1ミノだけ置くことになります。</p>
+<p>※ 同じような効果をもつオプションで、<cite>-r no</cite> があります。<cite>-mr 0</cite> との違いは以下の通りです。</p>
+<ul class="simple">
+<li><p><cite>-mr 0</cite> : 回転入れするための余計のミノを追加する必要のない解だけが表示される</p></li>
+<li><p><cite>-r no</cite> : 探索自体をスキップするので、そのままではミノを入れられない形も表示される</p></li>
+</ul>
+<p><strong>各オプションの関係を表した図</strong></p>
+<p><a class="reference internal" href="../../_images/option_001.png"><img alt="option_001" src="../../_images/option_001.png" style="width: 342.0px; height: 376.0px;" /></a></p>
+</div>
+<div class="section" id="id8">
+<h2>現バージョンでは未対応の機能<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <ul class="simple">
 <li><p>地形を削らないとTスピンできないケース <a class="reference external" href="http://tinyurl.com/y2anl6g3">サンプル</a></p></li>
 <li><dl class="simple">
@@ -685,7 +679,7 @@ y座標は、一番下の段を <cite>0</cite> とする。</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2020, newjade
+        &copy; Copyright 2017-2021, knewjade
 
     </p>
   </div>
