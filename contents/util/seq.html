@@ -9,14 +9,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>コマンド: util &mdash; solution-finder 1.00 ドキュメント</title>
+  <title>サブコマンド: util seq &mdash; solution-finder 1.00 ドキュメント</title>
   
 
   
   
   
   
-    <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/util/main.html"/>
+    <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/util/seq.html"/>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="サブコマンド: util fig" href="fig.html" />
-    <link rel="prev" title="コマンド: cover" href="../cover/main.html" />
+    <link rel="next" title="ワークフロー" href="../workflow.html" />
+    <link rel="prev" title="サブコマンド: util fumen" href="fumen.html" />
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93540402-4"></script>
 <script>
@@ -305,9 +305,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">コマンド: util</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">サブコマンド一覧</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="main.html">コマンド: util</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="main.html#id1">概要</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="main.html#id2">サブコマンド一覧</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="fig.html">サブコマンド: util fig</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fig.html#id1">概要</a></li>
 <li class="toctree-l4"><a class="reference internal" href="fig.html#id2">テト譜の指定方法</a></li>
@@ -323,12 +323,12 @@
 <li class="toctree-l4"><a class="reference internal" href="fumen.html#id4">オプション一覧</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="seq.html">サブコマンド: util seq</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="seq.html#id1">概要</a></li>
-<li class="toctree-l4"><a class="reference internal" href="seq.html#id2">基本コマンド</a></li>
-<li class="toctree-l4"><a class="reference internal" href="seq.html#id3">サンプルコマンド</a></li>
-<li class="toctree-l4"><a class="reference internal" href="seq.html#id5">フィルタリングや変換処理の順番</a></li>
-<li class="toctree-l4"><a class="reference internal" href="seq.html#id6">オプション一覧</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">サブコマンド: util seq</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">基本コマンド</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">サンプルコマンド</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">フィルタリングや変換処理の順番</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">オプション一覧</a></li>
 </ul>
 </li>
 </ul>
@@ -397,13 +397,15 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>コマンド: util</li>
+          <li><a href="main.html">コマンド: util</a> &raquo;</li>
+        
+      <li>サブコマンド: util seq</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/contents/util/main.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/contents/util/seq.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -416,44 +418,187 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="util">
-<h1>コマンド: util<a class="headerlink" href="#util" title="このヘッドラインへのパーマリンク">¶</a></h1>
+  <section id="util-seq">
+<h1>サブコマンド: util seq<a class="headerlink" href="#util-seq" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <section id="id1">
 <h2>概要<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>solution-finderの機能を補助するユーティリティ群です。</p>
-<p>utilの中には、さらにサブコマンドが含まれます。</p>
-<p>サブコマンドを実行する場合は <code class="docutils literal notranslate"><span class="pre">util</span> <span class="pre">サブコマンド</span></code> と指定してください。</p>
+<p>入力されたパターンの <code class="docutils literal notranslate"><span class="pre">*</span></code> などをシーケンス（ツモ順）に展開します。</p>
+<p>展開のほかに、ホールドによるミノの入れ替えにも対応しています。</p>
+<p>対応している変換モードは以下の通りです。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pass</span></code>: <code class="docutils literal notranslate"><span class="pre">*</span></code> などを展開だけを行う</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forward</span></code>: 指定パターンから、ホールドでミノを入れ替えてつくれる、ホールド後のシーケンスを展開する</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backward</span></code>: ホールドでミノを入れ替えると、指定パターンの形になる、ホールドの前の元のシーケンスを展開する。最終的にホールドされるため特定できないミノは <code class="docutils literal notranslate"><span class="pre">*</span></code> が出力されます</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backward-and-pass</span></code> <code class="docutils literal notranslate"><span class="pre">backward-pass</span></code>: <code class="docutils literal notranslate"><span class="pre">backward</span></code> と同じ処理をした後、<code class="docutils literal notranslate"><span class="pre">*</span></code> を7種類のミノで展開します</p></li>
+</ul>
 </section>
 <section id="id2">
-<h2>サブコマンド一覧<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<div class="toctree-wrapper compound">
-<p><span class="caption-text">目次</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="fig.html">サブコマンド: util fig</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fig.html#id1">概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fig.html#id2">テト譜の指定方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fig.html#id3">基本コマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fig.html#id4">カラーテーマ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fig.html#id8">オプション一覧</a></li>
+<h2>基本コマンド<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">util</span> <span class="pre">seq</span> <span class="pre">-p</span> <span class="pre">'*!'</span></code></p>
+</section>
+<section id="id3">
+<h2>サンプルコマンド<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>代表的なサンプルコマンドをいくつか例示します。</p>
+<section id="sz-7">
+<h3>Sの直後にZがくるツモ順 (開幕7ミノ)<a class="headerlink" href="#sz-7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">util</span> <span class="pre">seq</span> <span class="pre">-M</span> <span class="pre">pass</span> <span class="pre">-hh</span> <span class="pre">no</span> <span class="pre">-p</span> <span class="pre">*!</span> <span class="pre">-e</span> <span class="pre">'SZ'</span></code></p>
+</section>
+<section id="zs-7">
+<h3>ZよりSが先にくるツモ順 (開幕7ミノ)<a class="headerlink" href="#zs-7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">util</span> <span class="pre">seq</span> <span class="pre">-M</span> <span class="pre">pass</span> <span class="pre">-hh</span> <span class="pre">no</span> <span class="pre">-p</span> <span class="pre">*!</span> <span class="pre">-e</span> <span class="pre">'S.*Z'</span></code></p>
+</section>
+<section id="s2-7">
+<h3>Sが先頭から2番目にくるツモ順 (開幕7ミノ)<a class="headerlink" href="#s2-7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">util</span> <span class="pre">seq</span> <span class="pre">-M</span> <span class="pre">pass</span> <span class="pre">-hh</span> <span class="pre">no</span> <span class="pre">-p</span> <span class="pre">*!</span> <span class="pre">-e</span> <span class="pre">'^.S'</span></code></p>
+</section>
+<section id="s12-7">
+<h3>Sが先頭から1番目か2番目にくるツモ順 (開幕7ミノ)<a class="headerlink" href="#s12-7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">util</span> <span class="pre">seq</span> <span class="pre">-M</span> <span class="pre">pass</span> <span class="pre">-hh</span> <span class="pre">no</span> <span class="pre">-p</span> <span class="pre">*!</span> <span class="pre">-e</span> <span class="pre">'^.{0,1}?S'</span></code></p>
+</section>
+<section id="id4">
+<h3>Sが最後から2番目にくるツモ順 (開幕7ミノ)<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">util</span> <span class="pre">seq</span> <span class="pre">-M</span> <span class="pre">pass</span> <span class="pre">-hh</span> <span class="pre">no</span> <span class="pre">-p</span> <span class="pre">*!</span> <span class="pre">-e</span> <span class="pre">'S.$'</span></code></p>
+</section>
+<section id="t2-4">
+<h3>Tが2個含まれるツモ順 (任意のホールド+4ミノ選択)<a class="headerlink" href="#t2-4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">util</span> <span class="pre">seq</span> <span class="pre">-M</span> <span class="pre">pass</span> <span class="pre">-p</span> <span class="pre">*,*p4</span> <span class="pre">-n</span> <span class="pre">T=2</span></code></p>
+</section>
+<section id="tiolj-1-4">
+<h3>ツモ順 <code class="docutils literal notranslate"><span class="pre">TIOLJ</span></code> から、ホールド1回以内で並び変えられる、ホールド後のシーケンス (4ミノ)<a class="headerlink" href="#tiolj-1-4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">util</span> <span class="pre">seq</span> <span class="pre">-M</span> <span class="pre">forward</span> <span class="pre">-p</span> <span class="pre">TIOLJ</span> <span class="pre">-n</span> <span class="pre">HOLD&lt;=1</span></code></p>
+<p>※ 先頭の <code class="docutils literal notranslate"><span class="pre">T</span></code> は、はじめからホールドにある設定です</p>
+</section>
+<section id="tiolj-1-6">
+<h3>ツモ順 <code class="docutils literal notranslate"><span class="pre">TIOLJ</span></code> にホールド1回以内で並び変えられる、ホールド前のシーケンス (6ミノ)<a class="headerlink" href="#tiolj-1-6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">util</span> <span class="pre">seq</span> <span class="pre">-M</span> <span class="pre">backward</span> <span class="pre">-p</span> <span class="pre">TIOLJ</span> <span class="pre">-n</span> <span class="pre">HOLD&lt;=1</span></code></p>
+<p>※ 出力されるシーケンスの先頭のミノは、はじめからホールドにある設定です</p>
+</section>
+</section>
+<section id="id5">
+<h2>フィルタリングや変換処理の順番<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>各オプションの処理される順番は以下のようになっています。</p>
+<ul class="simple">
+<li><p>パターンをモードに従って展開</p></li>
+<li><p>ホールドの回数によるフィルタリング (<code class="docutils literal notranslate"><span class="pre">-n</span></code> オプション)</p></li>
+<li><p>シーケンスサイズの変換処理 (<code class="docutils literal notranslate"><span class="pre">-l</span></code> オプション)</p></li>
+<li><p>ミノの個数によるフィルタリング (<code class="docutils literal notranslate"><span class="pre">-n</span></code> オプション)</p></li>
+<li><p>正規表現によるフィルタリング (<code class="docutils literal notranslate"><span class="pre">-e</span></code> オプション)</p></li>
+<li><p>シーケンスの出力</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fumen.html">サブコマンド: util fumen</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fumen.html#id1">概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fumen.html#id2">テト譜の指定方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fumen.html#id3">基本コマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fumen.html#id4">オプション一覧</a></li>
+</section>
+<section id="id6">
+<h2>オプション一覧<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 42%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>short</p></th>
+<th class="head"><p>long</p></th>
+<th class="head"><p>default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-p</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--patterns</span></code></p></td>
+<td><p>なし</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-M</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--mode</span></code></p></td>
+<td><p>pass</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--length</span></code></p></td>
+<td><p>-1</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-d</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--distinct</span></code></p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-e</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--expression</span></code></p></td>
+<td><p>なし</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-ne</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--not-expression</span></code></p></td>
+<td><p>なし</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-n</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--num</span></code></p></td>
+<td><p>なし</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-hh</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--head-hold</span></code></p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<section id="p-patterns-default">
+<h3><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]<a class="headerlink" href="#p-patterns-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>探索ミノの組み合わせパターンを指定する。</p>
+<p>パターンを変更したい場合は <code class="docutils literal notranslate"><span class="pre">--pattern</span> <span class="pre">*p7</span></code> のように指定する。</p>
+</section>
+<section id="m-mode-default-pass">
+<h3><code class="docutils literal notranslate"><span class="pre">-M</span></code>, <code class="docutils literal notranslate"><span class="pre">--mode</span></code> [default: pass]<a class="headerlink" href="#m-mode-default-pass" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>入力されたパターンをどのように変換するかモードを指定する。</p>
+<p>対応しているモードは以下の通り。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pass</span></code>: <code class="docutils literal notranslate"><span class="pre">*</span></code> などを展開だけを行う</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forward</span></code>: 指定パターンから、ホールドでミノを入れ替えてつくれる、ホールド後のシーケンスを展開する</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backward</span></code>: ホールドでミノを入れ替えると、指定パターンの形になる、ホールドの前の元のシーケンスを展開する。最終的にホールドされるため特定できないミノは <code class="docutils literal notranslate"><span class="pre">*</span></code> が出力されます</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backward-and-pass</span></code> <code class="docutils literal notranslate"><span class="pre">backward-pass</span></code>: <code class="docutils literal notranslate"><span class="pre">backward</span></code> と同じ処理をした後、<code class="docutils literal notranslate"><span class="pre">*</span></code> を7種類のミノで展開します</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="seq.html">サブコマンド: util seq</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="seq.html#id1">概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seq.html#id2">基本コマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seq.html#id3">サンプルコマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seq.html#id5">フィルタリングや変換処理の順番</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seq.html#id6">オプション一覧</a></li>
+</section>
+<section id="l-length-default-1">
+<h3><code class="docutils literal notranslate"><span class="pre">-l</span></code>, <code class="docutils literal notranslate"><span class="pre">--length</span></code> [default: -1]<a class="headerlink" href="#l-length-default-1" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>変換後のシーケンスの長さを指定します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">-1</span></code> を入力したとき、以下の値が自動的に設定されます。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pass</span></code>: 入力されたパターンの長さと同じ</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forward</span></code>: 入力されたパターンの長さ - 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backward</span></code> <code class="docutils literal notranslate"><span class="pre">backward-and-pass</span></code>: 入力されたパターンの長さ + 1</p></li>
 </ul>
-</li>
+</section>
+<section id="d-distinct-default-yes">
+<h3><code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--distinct</span></code> [default: yes]<a class="headerlink" href="#d-distinct-default-yes" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>変換後のシーケンスの重複を取り除くか指定します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">yes</span></code> を指定した場合、重複したシーケンスを取り除かれます。</p>
+</section>
+<section id="e-expression-default">
+<h3><code class="docutils literal notranslate"><span class="pre">-e</span></code>, <code class="docutils literal notranslate"><span class="pre">--expression</span></code> [default: なし]<a class="headerlink" href="#e-expression-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>変換後のシーケンスに対して、条件が満たしているものだけを取り出します。</p>
+<p>条件は正規表現で指定します。</p>
+<p>なお <code class="docutils literal notranslate"><span class="pre">-ne</span></code> を同時に指定した場合、2つのオプションを満たすもの（AND）が取り出されます。</p>
+</section>
+<section id="ne-not-expression-default">
+<h3><code class="docutils literal notranslate"><span class="pre">-ne</span></code>, <code class="docutils literal notranslate"><span class="pre">--not-expression</span></code> [default: なし]<a class="headerlink" href="#ne-not-expression-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>変換後のシーケンスに対して、条件が満たさないものだけを取り出します。</p>
+<p>条件は正規表現で指定します。</p>
+<p>なお <code class="docutils literal notranslate"><span class="pre">-e</span></code> を同時に指定した場合、2つのオプションを満たすもの（AND）が取り出されます。</p>
+</section>
+<section id="n-num-default">
+<h3><code class="docutils literal notranslate"><span class="pre">-n</span></code>, <code class="docutils literal notranslate"><span class="pre">--num</span></code> [default: なし]<a class="headerlink" href="#n-num-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>変換後のシーケンスに対して、ミノの個数やホールドの回数の条件を満たすものだけを取り出します。</p>
+<p>条件は <code class="docutils literal notranslate"><span class="pre">T==0</span></code> <code class="docutils literal notranslate"><span class="pre">1&lt;Hold</span></code> のように指定します。条件を複数個同時に指定する場合は、スペースでつなげてください。</p>
+<p>ex) <code class="docutils literal notranslate"><span class="pre">S=1</span> <span class="pre">Z=1</span> <span class="pre">0&lt;Hold</span></code></p>
+<ul class="simple">
+<li><p>対象: <code class="docutils literal notranslate"><span class="pre">T</span></code> <code class="docutils literal notranslate"><span class="pre">I</span></code> <code class="docutils literal notranslate"><span class="pre">O</span></code> <code class="docutils literal notranslate"><span class="pre">L</span></code> <code class="docutils literal notranslate"><span class="pre">J</span></code> <code class="docutils literal notranslate"><span class="pre">S</span></code> <code class="docutils literal notranslate"><span class="pre">Z</span></code></p></li>
+<li><p>演算子: <code class="docutils literal notranslate"><span class="pre">==</span> <span class="pre">(=も可)</span></code> <code class="docutils literal notranslate"><span class="pre">!=</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></li>
 </ul>
-</div>
+</section>
+<section id="hh-head-hold-default-yes">
+<h3><code class="docutils literal notranslate"><span class="pre">-hh</span></code>, <code class="docutils literal notranslate"><span class="pre">--head-hold</span></code> [default: yes]<a class="headerlink" href="#hh-head-hold-default-yes" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>パターン( <code class="docutils literal notranslate"><span class="pre">forward</span></code> モード)・出力されるシーケンス( <code class="docutils literal notranslate"><span class="pre">backward</span></code> モード) の先頭のミノを、ホールドの初期値として扱うかどうかを指定します。
+この設定値は、ホールドの回数に影響を与えます。</p>
+<p>たとえば <code class="docutils literal notranslate"><span class="pre">LZSO</span></code> というシーケンスがあるとき、</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--hh</span> <span class="pre">yes</span></code> を指定すると、<code class="docutils literal notranslate"><span class="pre">L``がホールドされている状態で</span> <span class="pre">``Z</span></code> を受け取るところから開始される</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--hh</span> <span class="pre">no</span></code> を指定すると、何もホールドされていない状態で <code class="docutils literal notranslate"><span class="pre">L</span></code> を受け取るところから開始される</p></li>
+</ul>
+<p>となります。</p>
+</section>
 </section>
 </section>
 
@@ -465,10 +610,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="fig.html" class="btn btn-neutral float-right" title="サブコマンド: util fig" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../workflow.html" class="btn btn-neutral float-right" title="ワークフロー" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../cover/main.html" class="btn btn-neutral float-left" title="コマンド: cover" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="fumen.html" class="btn btn-neutral float-left" title="サブコマンド: util fumen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
