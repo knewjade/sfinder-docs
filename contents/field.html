@@ -1,42 +1,44 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<html class="writer-html5" lang="ja" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>フィールドの指定 &mdash; solution-finder 1.00 ドキュメント</title>
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
   
+  
+
   
   
     <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/field.html"/>
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="ミノの組み合わせ" href="patterns.html" />
@@ -84,6 +86,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -91,7 +94,7 @@
               
             
             
-              <p><span class="caption-text">目次</span></p>
+              <p class="caption"><span class="caption-text">目次</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">クイックスタート</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#id2">はじめに</a><ul>
@@ -357,6 +360,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -391,18 +395,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>フィールドの指定</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/contents/field.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -416,15 +422,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1>フィールドの指定<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<section id="id2">
+<div class="section" id="id2">
 <h2>概要<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>このページでは、フィールドを指定する方法について説明します。</p>
 <p>フィールドは、コマンド引数から以外にもテキストファイルから指定できます。</p>
-<section id="id3">
+<div class="section" id="id3">
 <h3>書き方: テト譜をパラメータから入力する場合<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<section id="id4">
+<div class="section" id="id4">
 <h4>テト譜の入力方法<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <ol class="arabic simple">
 <li><p>テト譜上で地形を入力します。</p></li>
@@ -453,9 +459,9 @@
 <li><p>コマンドに <code class="docutils literal notranslate"><span class="pre">-P</span></code> オプションをつけることで、ロードするテト譜のページを指定できます</p></li>
 </ul>
 </div>
-</section>
-</section>
-<section id="id5">
+</div>
+</div>
+<div class="section" id="id5">
 <h3>書き方: テキストファイルからテト譜を入力する場合<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>field.txt に、1行につき1つのテト譜データが並ぶように入力します。</p>
 <p>サンプル</p>
@@ -468,10 +474,10 @@
 <p class="admonition-title">注釈</p>
 <p>テキストファイルのエンコーディングは、UTF-8(BOMなし)にしてください。</p>
 </div>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h3>書き方: テキストファイルからフィールド情報を直接かく場合<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<section id="id7">
+<div class="section" id="id7">
 <h4>フィールドの変更方法と制限<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>field.txt に「パーフェクトまでに削除するライン数」と「フィールドの形」を入力してください。</p>
 <p>※ 「パーフェクトまでに削除するライン数」は、percent, path, setupコマンドでのみ必要となります。</p>
@@ -525,39 +531,39 @@ v115@9gwhi0DeR4whg0RpCeR4wwwhglRpBeBtxwwhilCeBt?wwJeAgWUA0no2AtTMeDUPNXEuN98AQPU
 <p class="admonition-title">注釈</p>
 <p>テキストファイルのエンコーディングは、UTF-8(BOMなし)にしてください。</p>
 </div>
-</section>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="patterns.html" class="btn btn-neutral float-right" title="ミノの組み合わせ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="quick_start.html" class="btn btn-neutral float-left" title="クイックスタート" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="patterns.html" class="btn btn-neutral float-right" title="ミノの組み合わせ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="quick_start.html" class="btn btn-neutral float-left" title="クイックスタート" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2021, knewjade
+        &#169; Copyright 2017-2021, knewjade.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -565,7 +571,6 @@ v115@9gwhi0DeR4whg0RpCeR4wwwhglRpBeBtxwwhilCeBt?wwJeAgWUA0no2AtTMeDUPNXEuN98AQPU
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,42 +1,44 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<html class="writer-html5" lang="ja" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>コマンド: path &mdash; solution-finder 1.00 ドキュメント</title>
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
   
+  
+
   
   
     <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/path/main.html"/>
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="key: none" href="csv.html" />
@@ -84,6 +86,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -91,7 +94,7 @@
               
             
             
-              <p><span class="caption-text">目次</span></p>
+              <p class="caption"><span class="caption-text">目次</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../quick_start.html">クイックスタート</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../quick_start.html#id2">はじめに</a><ul>
@@ -357,6 +360,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -391,18 +395,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>コマンド: path</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../../_sources/contents/path/main.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -416,9 +422,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="path">
+  <div class="section" id="path">
 <h1>コマンド: path<a class="headerlink" href="#path" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<section id="id1">
+<div class="section" id="id1">
 <h2>概要<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ある地形からパーフェクトまでの操作手順をすべて列挙する</p>
 <ul class="simple">
@@ -438,12 +444,12 @@
 </dl>
 </li>
 </ul>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>基本コマンド<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">path</span> <span class="pre">--tetfu</span> <span class="pre">v115&#64;9gE8DeG8CeH8BeG8CeA8JeAgH</span> <span class="pre">--patterns</span> <span class="pre">*p4</span></code></p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>出力フォーマット<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>出力フォーマットは、以下の方式から選択できます。
 変更したい場合は、オプションから変更できます。</p>
@@ -451,8 +457,8 @@
 <li><p>html: シンプルなHTML形式のテト譜リンク</p></li>
 <li><p>csv: csv形式（詳細は後述）</p></li>
 </ul>
-</section>
-<section id="html">
+</div>
+<div class="section" id="html">
 <h2>HTML形式<a class="headerlink" href="#html" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>サンプル</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">S</span><span class="o">-</span><span class="n">Spawn</span> <span class="n">T</span><span class="o">-</span><span class="n">Right</span> <span class="n">L</span><span class="o">-</span><span class="n">Left</span> <span class="n">O</span><span class="o">-</span><span class="n">Spawn</span> <span class="n">Z</span><span class="o">-</span><span class="n">Spawn</span> <span class="n">I</span><span class="o">-</span><span class="n">Spawn</span> <span class="o">/</span> <span class="mf">30.0</span> <span class="o">%</span> <span class="p">[</span><span class="mi">1512</span><span class="p">]</span>
@@ -481,8 +487,8 @@
 </dl>
 </li>
 </ul>
-</section>
-<section id="csv">
+</div>
+<div class="section" id="csv">
 <h2>CSV形式<a class="headerlink" href="#csv" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
@@ -492,8 +498,8 @@
 <li class="toctree-l1"><a class="reference internal" href="csv.html#key-use">key: use</a></li>
 </ul>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>オプション一覧<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -582,33 +588,33 @@
 </tr>
 </tbody>
 </table>
-<section id="h-hold-default-use">
+<div class="section" id="h-hold-default-use">
 <h3><code class="docutils literal notranslate"><span class="pre">-H</span></code>, <code class="docutils literal notranslate"><span class="pre">--hold</span></code> [default: use]<a class="headerlink" href="#h-hold-default-use" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>ホールドの有無を指定する。</p>
 <p>ホールドなしで探索する場合は <code class="docutils literal notranslate"><span class="pre">--hold</span> <span class="pre">avoid</span></code> を指定する。</p>
-</section>
-<section id="t-tetfu-default">
+</div>
+<div class="section" id="t-tetfu-default">
 <h3><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetfu</span></code> [default: なし]<a class="headerlink" href="#t-tetfu-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>フィールドやオプションなどを指定したテト譜データを指定する。</p>
 <p>テト譜で探索条件を指定する場合は <code class="docutils literal notranslate"><span class="pre">--tetfu</span> <span class="pre">v115&#64;vhAAgH</span></code> のように指定する。</p>
 <p>v115のテト譜データにのみ対応。</p>
-</section>
-<section id="p-page-default-1">
+</div>
+<div class="section" id="p-page-default-1">
 <h3><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--page</span></code> [default: 1]<a class="headerlink" href="#p-page-default-1" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>テト譜からロードするページを指定する。</p>
 <p>読み込むページを変更したい場合は <code class="docutils literal notranslate"><span class="pre">--page</span> <span class="pre">31</span></code> のように指定する。</p>
-</section>
-<section id="p-patterns-default">
+</div>
+<div class="section" id="p-patterns-default">
 <h3><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]<a class="headerlink" href="#p-patterns-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>探索ミノの組み合わせパターンを指定する。</p>
 <p>パターンを変更したい場合は <code class="docutils literal notranslate"><span class="pre">--pattern</span> <span class="pre">*p7</span></code> のように指定する。</p>
 <p>複数パターンを指定したい場合は <code class="docutils literal notranslate"><span class="pre">;</span></code> で連結する (<code class="docutils literal notranslate"><span class="pre">--pattern</span> <span class="pre">T,*;I,*</span></code>)</p>
-</section>
-<section id="c-clear-line-default-4">
+</div>
+<div class="section" id="c-clear-line-default-4">
 <h3><code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--clear-line</span></code> [default: 4]<a class="headerlink" href="#c-clear-line-default-4" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>パフェまでに消去するライン数を指定する。</p>
-</section>
-<section id="f-format-default-html">
+</div>
+<div class="section" id="f-format-default-html">
 <h3><code class="docutils literal notranslate"><span class="pre">-f</span></code>, <code class="docutils literal notranslate"><span class="pre">--format</span></code> [default: html]<a class="headerlink" href="#f-format-default-html" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>以下の出力フォーマットのうち、ひとつを指定する。</p>
 <ul class="simple">
@@ -627,8 +633,8 @@
 </dl>
 </li>
 </ul>
-</section>
-<section id="k-key-default-none">
+</div>
+<div class="section" id="k-key-default-none">
 <h3><code class="docutils literal notranslate"><span class="pre">-k</span></code>, <code class="docutils literal notranslate"><span class="pre">--key</span></code> [default: none]<a class="headerlink" href="#k-key-default-none" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>formatオプションに csv を選択したとき、さらに出力する項目を指定する。</p>
 <p>以下の出力項目のうち、ひとつを指定する。</p>
@@ -640,16 +646,16 @@
 </ul>
 <p>各出力項目の詳細なフォーマットは <a class="reference internal" href="csv.html"><span class="doc">CSV形式</span></a> を参照してください。</p>
 <p>なお、オプションは先頭の1文字だけでも指定することができます。 (solution → s)</p>
-</section>
-<section id="s-split-default-no">
+</div>
+<div class="section" id="s-split-default-no">
 <h3><code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">--split</span></code> [default: no]<a class="headerlink" href="#s-split-default-no" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>出力フォーマットがlinkのときに出力されるテト譜で、手順を1ミノずつ分割するか指定する。</p>
 <ul class="simple">
 <li><p>yes: 1ページにつき1ミノずつ表示される形で出力</p></li>
 <li><p>no: すべてのミノが1ページに納まった形で出力</p></li>
 </ul>
-</section>
-<section id="l-max-layer-default-2">
+</div>
+<div class="section" id="l-max-layer-default-2">
 <h3><code class="docutils literal notranslate"><span class="pre">-L</span></code>, <code class="docutils literal notranslate"><span class="pre">--max-layer</span></code> [default: 2]<a class="headerlink" href="#l-max-layer-default-2" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>手順の絞り込みをどこまで行うかを指定する。
 次の数字を指定すると、対応するところまで絞り込みを行う。</p>
@@ -657,13 +663,13 @@
 <li><p>1: unique</p></li>
 <li><p>2: unique, minimal の両方</p></li>
 </ul>
-</section>
-<section id="so-specified-only-default-yes">
+</div>
+<div class="section" id="so-specified-only-default-yes">
 <h3><code class="docutils literal notranslate"><span class="pre">-so</span></code>, <code class="docutils literal notranslate"><span class="pre">--specified-only</span></code> [default: yes]<a class="headerlink" href="#so-specified-only-default-yes" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>minimalの絞り込みにおいて、パターンの重複をチェックするとき、そのパターンを入力パターン内に限定するならyesを指定。
 noの場合、解自体から抽出したパターンをもとに、重複をチェックします。</p>
-</section>
-<section id="r-reserved-default-false">
+</div>
+<div class="section" id="r-reserved-default-false">
 <h3><code class="docutils literal notranslate"><span class="pre">-r</span></code>, <code class="docutils literal notranslate"><span class="pre">--reserved</span></code> [default: false]<a class="headerlink" href="#r-reserved-default-false" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>ミノの接着場所を予約します。</p>
 <p>たとえば <a class="reference external" href="http://fumen.zui.jp/?v115&#64;9gwhDeE8whCeF8whBeG8whCeF8JeAgH">テンプレ+縦I</a> を入力したとします。</p>
@@ -671,8 +677,8 @@ noの場合、解自体から抽出したパターンをもとに、重複をチ
 最終的に色のあるブロック通りに配置されるパフェが探索対象となります。</p>
 <p>なおこのとき、色のついたブロックは4個単位である必要はありません（1ブロックでも可）。</p>
 <p>この機能を有効にする場合は <code class="docutils literal notranslate"><span class="pre">true</span></code> を指定してください。</p>
-</section>
-<section id="d-drop-default-soft">
+</div>
+<div class="section" id="d-drop-default-soft">
 <h3><code class="docutils literal notranslate"><span class="pre">-d</span></code>, <code class="docutils literal notranslate"><span class="pre">--drop</span></code> [default: soft]<a class="headerlink" href="#d-drop-default-soft" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>ミノの操作に制限を加える。</p>
 <p>以下から操作方法をひとつ選択する。</p>
@@ -688,22 +694,22 @@ noの場合、解自体から抽出したパターンをもとに、重複をチ
 </ul>
 <p>※ T-Spin系のdropでは、「T-Spinできないケース」や「ライン消去が発生しないT-Spinになるケース」ではミノを置きません。
 また、Tミノを使わないケースでは <cite>harddrop</cite> と同じになる点にご注意ください (solutionが省略されるわけではありません)。</p>
-</section>
-<section id="th-threads-default-1">
+</div>
+<div class="section" id="th-threads-default-1">
 <h3><code class="docutils literal notranslate"><span class="pre">-th</span></code>, <code class="docutils literal notranslate"><span class="pre">--threads</span></code> [default: -1]<a class="headerlink" href="#th-threads-default-1" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>探索時に使用するスレッド数を指定します。</p>
 <p><cite>1</cite> を指定したとき、シングルスレッドでの探索となります。</p>
 <p>もし、0以下を指定した場合は、自動的に「実行環境のコア数」を設定します。</p>
-</section>
-<section id="cb-cached-bit-default-0">
+</div>
+<div class="section" id="cb-cached-bit-default-0">
 <h3><code class="docutils literal notranslate"><span class="pre">-cb</span></code>, <code class="docutils literal notranslate"><span class="pre">--cached-bit</span></code> [default: 0]<a class="headerlink" href="#cb-cached-bit-default-0" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>内部のアルゴリズムで使用するキャッシュの最小ビットを指定します。</p>
 <p>基本的にこの値を変更する必要はありません。</p>
 <p>実行環境で使用できるメモリが小さく、OutOfMemoryErrorが頻発して計算が続行できなくなる場合のみ、この値を変更してください。</p>
 <p>この数値を大きくすることで計算結果を保存せずにその都度計算するようになるため、実行時間が非常に長くなります。</p>
 <p>そのため、値を調節するときは1ずつ大きくしていき、再実行して確認しながら調整してください。</p>
-</section>
-<section id="o-output-base-default-output-path-txt">
+</div>
+<div class="section" id="o-output-base-default-output-path-txt">
 <h3><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output-base</span></code> [default: output/path.txt]<a class="headerlink" href="#o-output-base-default-output-path-txt" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>実行後に結果を出力するファイルのパスを指定する。
 ただし、拡張子は出力形式によって変更される可能性があります。</p>
@@ -713,50 +719,50 @@ noの場合、解自体から抽出したパターンをもとに、重複をチ
 <li><p>指定したファイル名 + _unique に unique (重複をのぞいた手順) の結果が出力される。</p></li>
 <li><p>指定したファイル名 + _minimal に minimal (同じミノ順をカバーするパターンをのぞいた手順) の結果が出力される。</p></li>
 </ul>
-</section>
-<section id="lp-log-path-default-output-last-output-txt">
+</div>
+<div class="section" id="lp-log-path-default-output-last-output-txt">
 <h3><code class="docutils literal notranslate"><span class="pre">-lp</span></code>, <code class="docutils literal notranslate"><span class="pre">--log-path</span></code> [default: output/last_output.txt]<a class="headerlink" href="#lp-log-path-default-output-last-output-txt" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>実行時のログを保存するファイルのパスを指定する。</p>
-</section>
-<section id="fp-field-path-default-input-field-txt">
+</div>
+<div class="section" id="fp-field-path-default-input-field-txt">
 <h3><code class="docutils literal notranslate"><span class="pre">-fp</span></code>, <code class="docutils literal notranslate"><span class="pre">--field-path</span></code> [default: input/field.txt]<a class="headerlink" href="#fp-field-path-default-input-field-txt" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>フィールドを定義するファイルのパスを指定する。</p>
-</section>
-<section id="pp-patterns-path-default-input-patterns-txt">
+</div>
+<div class="section" id="pp-patterns-path-default-input-patterns-txt">
 <h3><code class="docutils literal notranslate"><span class="pre">-pp</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns-path</span></code> [default: input/patterns.txt]<a class="headerlink" href="#pp-patterns-path-default-input-patterns-txt" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>探索の組み合わせパターンを定義するファイルのパスを指定する。</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="csv.html" class="btn btn-neutral float-right" title="key: none" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../percent/main.html" class="btn btn-neutral float-left" title="コマンド: percent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="csv.html" class="btn btn-neutral float-right" title="key: none" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../percent/main.html" class="btn btn-neutral float-left" title="コマンド: percent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2021, knewjade
+        &#169; Copyright 2017-2021, knewjade.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -764,7 +770,6 @@ noの場合、解自体から抽出したパターンをもとに、重複をチ
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

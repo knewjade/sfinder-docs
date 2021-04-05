@@ -1,42 +1,44 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<html class="writer-html5" lang="ja" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>key: none &mdash; solution-finder 1.00 ドキュメント</title>
   
 
   
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
   
+  
+
   
   
     <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/path/csv.html"/>
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="コマンド: setup" href="../setup/main.html" />
@@ -84,6 +86,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -91,7 +94,7 @@
               
             
             
-              <p><span class="caption-text">目次</span></p>
+              <p class="caption"><span class="caption-text">目次</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../quick_start.html">クイックスタート</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../quick_start.html#id2">はじめに</a><ul>
@@ -357,6 +360,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -391,11 +395,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="main.html">コマンド: path</a> &raquo;</li>
         
@@ -404,7 +410,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../../_sources/contents/path/csv.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -418,7 +424,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="key-none">
+  <div class="section" id="key-none">
 <h1>key: none<a class="headerlink" href="#key-none" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>出力されるCSVファイルの1行につき、一連の操作手順を表現します。</p>
 <p>例)</p>
@@ -466,8 +472,8 @@
 </li>
 </ul>
 <p>この4つの要素が1セットとして、必要な操作回数だけ右にセットが続きます。</p>
-</section>
-<section id="key-solution">
+</div>
+<div class="section" id="key-solution">
 <h1>key: solution<a class="headerlink" href="#key-solution" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>パフェ手順（地形）をキーして、それぞれの手順で対応できるツモを振り分けます。</p>
 <p>出力例) <code class="docutils literal notranslate"><span class="pre">path</span> <span class="pre">-t</span> <span class="pre">v115&#64;BhF8CeG8BeH8CeG8JeAgWDAqedBA</span> <span class="pre">-p</span> <span class="pre">*p4</span> <span class="pre">-f</span> <span class="pre">csv</span> <span class="pre">-k</span> <span class="pre">solution</span></code></p>
@@ -591,8 +597,8 @@ http://fumen.zui.jp/?v115@9gh0R4F8g0R4G8BtH8g0BtG8JeAgWDA6vzBA,JSZ,2,2,48,ZSJ;ZJ
 </dl>
 </li>
 </ul>
-</section>
-<section id="key-pattern">
+</div>
+<div class="section" id="key-pattern">
 <h1>key: pattern<a class="headerlink" href="#key-pattern" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>ツモをキーして、それぞれのツモで対応できるパフェ手順を振り分けます。</p>
 <p>出力例) <code class="docutils literal notranslate"><span class="pre">path</span> <span class="pre">-t</span> <span class="pre">v115&#64;BhF8CeG8BeH8CeG8JeAgWDAqedBA</span> <span class="pre">-p</span> <span class="pre">*p4</span> <span class="pre">-f</span> <span class="pre">csv</span> <span class="pre">-k</span> <span class="pre">pattern</span></code></p>
@@ -680,8 +686,8 @@ http://fumen.zui.jp/?v115@9gh0R4F8g0R4G8BtH8g0BtG8JeAgWDA6vzBA,JSZ,2,2,48,ZSJ;ZJ
 </dl>
 </li>
 </ul>
-</section>
-<section id="key-use">
+</div>
+<div class="section" id="key-use">
 <h1>key: use<a class="headerlink" href="#key-use" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>使用ミノをキーして、それぞれのミノの組み合わせで対応できるツモやパフェ手順を振り分けます。</p>
 <p>出力例) <code class="docutils literal notranslate"><span class="pre">path</span> <span class="pre">-t</span> <span class="pre">v115&#64;BhF8CeG8BeH8CeG8JeAgWDAqedBA</span> <span class="pre">-p</span> <span class="pre">*p4</span> <span class="pre">-f</span> <span class="pre">csv</span> <span class="pre">-k</span> <span class="pre">use</span></code></p>
@@ -763,36 +769,36 @@ http://fumen.zui.jp/?v115@9gh0R4F8g0R4G8BtH8g0BtG8JeAgWDA6vzBA,JSZ,2,2,48,ZSJ;ZJ
 </dl>
 </li>
 </ul>
-</section>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../setup/main.html" class="btn btn-neutral float-right" title="コマンド: setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="main.html" class="btn btn-neutral float-left" title="コマンド: path" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="../setup/main.html" class="btn btn-neutral float-right" title="コマンド: setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="main.html" class="btn btn-neutral float-left" title="コマンド: path" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2021, knewjade
+        &#169; Copyright 2017-2021, knewjade.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -800,7 +806,6 @@ http://fumen.zui.jp/?v115@9gh0R4F8g0R4G8BtH8g0BtG8JeAgWDA6vzBA,JSZ,2,2,48,ZSJ;ZJ
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

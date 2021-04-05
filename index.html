@@ -1,42 +1,44 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<html class="writer-html5" lang="ja" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>solution-finderドキュメント &mdash; solution-finder 1.00 ドキュメント</title>
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
   
+  
+
   
   
     <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/index.html"/>
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
         <script src="_static/translations.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
     <link rel="next" title="クイックスタート" href="contents/quick_start.html" />
@@ -83,6 +85,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -90,7 +93,7 @@
               
             
             
-              <p><span class="caption-text">目次</span></p>
+              <p class="caption"><span class="caption-text">目次</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contents/quick_start.html">クイックスタート</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="contents/quick_start.html#id2">はじめに</a><ul>
@@ -356,6 +359,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -390,18 +394,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
       <li>solution-finderドキュメント</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -415,9 +421,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="solution-finder">
+  <div class="section" id="solution-finder">
 <h1>solution-finderドキュメント<a class="headerlink" href="#solution-finder" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<section id="id1">
+<div class="section" id="id1">
 <h2>概要<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>solution-finderとは、テトリスで「ある地形からパーフェクトできる確率・接着手順」など、条件に従った解を探索するためのツールです。</p>
 <p>solution-finderは、探索ツールとして次の特徴を持っています。</p>
@@ -428,8 +434,8 @@
 <li><p>実行時にオプションを与えることで「ホールドあり・なし」「ハードドロップのみ」など細かい設定が可能</p></li>
 <li><p>フィールドの入力として <a class="reference external" href="http://fumen.zui.jp">連続テト譜エディタ Ver 1.15a</a> のデータに対応</p></li>
 </ul>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>主な機能<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <ul class="simple">
 <li><dl class="simple">
@@ -477,15 +483,15 @@
 </dl>
 </li>
 </ul>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>ダウンロード<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ダウンロードは 以下のリンク からお願いします。</p>
 <p><a class="reference external" href="https://github.com/knewjade/solution-finder/releases/">https://github.com/knewjade/solution-finder/releases/</a></p>
 <p>※ プログラムの実行には、Java8が実行できる環境が必要です
 ※ メモリの関係から 64bit版 を推奨します</p>
-</section>
-<section id="fumen-preview-chrome-extension">
+</div>
+<div class="section" id="fumen-preview-chrome-extension">
 <h2>Fumen Preview (Chrome Extension)<a class="headerlink" href="#fumen-preview-chrome-extension" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>solution-finderが出力するHTMLファイルのテト譜を開くことなく確認できるChrome拡張機能を別途公開しています。</p>
 <p><a class="reference internal" href="_images/video1.gif"><img alt="preview_video_001" src="_images/video1.gif" style="width: 476.0px; height: 198.5px;" /></a></p>
@@ -493,8 +499,8 @@
 <p>なお、Chrome拡張機能のデフォルトの設定では、ローカルファイルには拡張機能が適用されません。</p>
 <p>Fumen Previewの設定画面から「ファイルのURLへのアクセスを許可する」にチェックする必要があります。ご注意ください。</p>
 <p><a class="reference internal" href="_images/allow_local_access.png"><img alt="preview_setting_001" src="_images/allow_local_access.png" style="width: 863.0px; height: 703.0px;" /></a></p>
-</section>
-<section id="gui">
+</div>
+<div class="section" id="gui">
 <h2>補助GUI<a class="headerlink" href="#gui" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>solution-finderを操作しやすくするGUIを <a class="reference external" href="https://twitter.com/kitsune_fuchi">&#64;kitsune_fuchi (twitter)</a> さんに作成していただきました。</p>
 <p>なお、補助GUIではpercent・path・util figコマンドのみ対応しています。ご注意ください</p>
@@ -516,7 +522,7 @@
 </li>
 </ul>
 <div class="toctree-wrapper compound">
-<p><span class="caption-text">目次</span></p>
+<p class="caption"><span class="caption-text">目次</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contents/quick_start.html">クイックスタート</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="contents/quick_start.html#id2">はじめに</a></li>
@@ -609,35 +615,36 @@
 <li class="toctree-l1"><a class="reference internal" href="contents/contact.html">連絡先</a></li>
 </ul>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="contents/quick_start.html" class="btn btn-neutral float-right" title="クイックスタート" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
+        <a href="contents/quick_start.html" class="btn btn-neutral float-right" title="クイックスタート" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2021, knewjade
+        &#169; Copyright 2017-2021, knewjade.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -645,7 +652,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
