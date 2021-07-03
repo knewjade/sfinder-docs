@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>コマンドについて &mdash; solution-finder 1.00 ドキュメント</title>
+  <title>関連ツール &mdash; solution-finder 1.00 ドキュメント</title>
   
 
   
@@ -19,7 +19,7 @@
 
   
   
-    <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/command.html"/>
+    <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/tools.html"/>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="コマンド: percent" href="percent/main.html" />
-    <link rel="prev" title="ミノの組み合わせ" href="patterns.html" />
+    <link rel="next" title="連絡先" href="contact.html" />
+    <link rel="prev" title="制限・注意・不具合情報" href="caution.html" />
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93540402-4"></script>
 <script>
@@ -130,13 +130,13 @@
 <li class="toctree-l2"><a class="reference internal" href="patterns.html#id10">サンプル: コマンド集</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">コマンドについて</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">概要</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">サブコマンドについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command.html">コマンドについて</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="command.html#id2">概要</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="command.html#id3">サブコマンドについて</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">テト譜からオプションを指定する</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">オプションの優先順位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command.html#id4">テト譜からオプションを指定する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command.html#id5">オプションの優先順位</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="percent/main.html">コマンド: percent</a><ul>
@@ -354,10 +354,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tools.html">関連ツール</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tools.html#id2">このページについて</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools.html#fumen-preview-chrome-extension">Fumen Preview (Chrome Extension)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools.html#path-filter">Path Filter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">関連ツール</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">このページについて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fumen-preview-chrome-extension">Fumen Preview (Chrome Extension)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#path-filter">Path Filter</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">連絡先</a></li>
@@ -409,13 +409,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>コマンドについて</li>
+      <li>関連ツール</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/contents/command.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/contents/tools.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -429,82 +429,26 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>コマンドについて<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>関連ツール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="id2">
-<h2>概要<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>このページでは、solution-finderを実行するためのコマンドについて説明します。</p>
-<p>solution-finderの実行は、基本的に次のようなコマンドで実行します。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">sfinder</span><span class="o">.</span><span class="n">jar</span> <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
-</pre></div>
+<h2>このページについて<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>solution-finderと併用すると便利なツールを記載します。</p>
 </div>
-<p>このとき、&lt;command&gt;を必ず指定する必要があります。</p>
-<p>solution-finderでは、現在3つのコマンドが実装されており、それぞれ以下の処理を行います。</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 89%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>&lt;command&gt;</p></th>
-<th class="head"><p>処理内容</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>percent</p></td>
-<td><p>ある地形からパーフェクトできる確率を計算する</p></td>
-</tr>
-<tr class="row-odd"><td><p>path</p></td>
-<td><p>ある地形からパーフェクトまでの操作手順をすべて列挙する</p></td>
-</tr>
-<tr class="row-even"><td><p>util</p></td>
-<td><p>ユーティリティ群 （※ コマンドのあとにサブコマンドが続く。詳細は次節を参照）</p></td>
-</tr>
-</tbody>
-</table>
-<p>このコマンドごとにそれぞれオプションが用意されています。</p>
-<p>オプションの詳細は各コマンドに記載されていますので、そちらをご参照ください。</p>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">-v</span></code> で、現在のバージョンを表示します</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">-h</span></code> で、Usage (現在の実装されているコマンド)を表示します</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">&lt;command&gt;</span> <span class="pre">-h</span></code> で、各オプションごとのUsage (使用できるオプション一覧)を表示します</p></li>
-</ul>
+<div class="section" id="fumen-preview-chrome-extension">
+<h2>Fumen Preview (Chrome Extension)<a class="headerlink" href="#fumen-preview-chrome-extension" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>solution-finderが出力するHTMLファイルのテト譜を開くことなく確認できるChrome拡張機能を別途公開しています。</p>
+<p><a class="reference internal" href="contents/contents/img/extension/video1.gif"><img alt="preview_video_001" src="contents/contents/img/extension/video1.gif" /></a></p>
+<p><a class="reference external" href="https://chrome.google.com/webstore/detail/fumen-preview/kkmandajpdmjfibomfokgdjcgmbkipef">Chrome Web Store</a> からインストールすることができます。あわせてご利用ください。</p>
+<p>なお、Chrome拡張機能のデフォルトの設定では、ローカルファイルには拡張機能が適用されません。</p>
+<p>Fumen Previewの設定画面から「ファイルのURLへのアクセスを許可する」にチェックする必要があります。ご注意ください。</p>
+<p><a class="reference internal" href="contents/contents/img/extension/allow_local_access.png"><img alt="preview_setting_001" src="contents/contents/img/extension/allow_local_access.png" /></a></p>
 </div>
-<div class="section" id="id3">
-<h3>サブコマンドについて<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>utilコマンドについては、コマンドの下にサブコマンドを指定します。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">sfinder</span><span class="o">.</span><span class="n">jar</span> <span class="n">util</span> <span class="o">&lt;</span><span class="n">sub</span><span class="o">-</span><span class="n">command</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>このとき、&lt;sub-command&gt;を必ず指定する必要があります。</p>
-<p>このコマンドごとにそれぞれオプションが用意されています。</p>
-<p>オプションの詳細は各コマンドに記載されていますので、そちらをご参照ください。</p>
-</div>
-</div>
-<div class="section" id="id4">
-<h2>テト譜からオプションを指定する<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>テト譜のコメント欄で、削除ライン数の横に上記のオプションを並べることで設定できます。</p>
-<p>例) 4ラインパフェで、パターンを*p4、ホールドなしで探索したい場合</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">--</span><span class="n">patterns</span> <span class="o">*</span><span class="n">p4</span> <span class="o">--</span><span class="n">hold</span> <span class="n">avoid</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>オプションの優先順位<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>コマンドラインやテト譜など、複数箇所で同一オプションを設定した場合、次の数字が小さい場所の値が優先されます。</p>
-<ol class="arabic simple">
-<li><p>コマンドライン引数 <code class="docutils literal notranslate"><span class="pre">sfinder.jar</span> <span class="pre">&lt;command&gt;</span> <span class="pre">[options]</span></code></p></li>
-<li><p>テト譜のコマンド</p></li>
-<li><p>フィールドファイル・パターンファイルの設定値</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<ul class="simple">
-<li><p>すべてのオプションをひとつの場所に書く必要はありません</p></li>
-<li><p>たとえば、フィールドの高さをテト譜に指定して、コマンドでパターンを指定することができる</p></li>
-</ul>
-</div>
+<div class="section" id="path-filter">
+<h2>Path Filter<a class="headerlink" href="#path-filter" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>solution-finderのpathの結果を基に、パーフェクトクリア成功率を維持したまま最も少ない組み合わせをみつけます。</p>
+<p>このプログラムによって得られる組み合わせは、厳密に最小とは限らないことにご注意ください。</p>
+<p><a class="reference external" href="https://github.com/knewjade/path-filter/releases">ダウンロードはこちらから</a></p>
+<p>詳しい使い方は、ダウンロードしたファイル内のテキストファイルをご参照ください。</p>
 </div>
 </div>
 
@@ -514,8 +458,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="percent/main.html" class="btn btn-neutral float-right" title="コマンド: percent" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="patterns.html" class="btn btn-neutral float-left" title="ミノの組み合わせ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contact.html" class="btn btn-neutral float-right" title="連絡先" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="caution.html" class="btn btn-neutral float-left" title="制限・注意・不具合情報" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
