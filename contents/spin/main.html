@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>コマンド: spin &mdash; solution-finder 1.02 ドキュメント</title>
+  <title>コマンド: spin &mdash; solution-finder 1.03 ドキュメント</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/spin/main.html"/>
@@ -473,7 +473,7 @@
 <p>※ 同じような効果をもつオプションで、<code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">no</span></code> があります。<code class="docutils literal notranslate"><span class="pre">-mr</span> <span class="pre">0</span></code> との違いは以下の通りです。</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">-mr</span> <span class="pre">0</span></code> : 回転入れするための余計のミノを追加する必要のない解だけが表示される</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">no</span></code> : 探索自体をスキップするので、そのままではミノを入れられない形も表示される</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">no</span> <span class="pre">--filter</span> <span class="pre">none</span></code> : 探索自体をスキップするので、そのままではミノを入れられない形も表示される</p></li>
 </ul>
 <p><strong>各オプションの関係を表した図</strong></p>
 <p><a class="reference internal" href="../../_images/option_001.png"><img alt="option_001" src="../../_images/option_001.png" style="width: 342.0px; height: 376.0px;" /></a></p>
@@ -541,8 +541,9 @@ y座標は、一番下の段を <cite>0</cite> とする。</p>
 </div>
 <div class="section" id="r-roof-default-yes">
 <h3><code class="docutils literal notranslate"><span class="pre">-r</span></code>, <code class="docutils literal notranslate"><span class="pre">--roof</span></code> [default: yes]<a class="headerlink" href="#r-roof-default-yes" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>このオプションが <cite>yes</cite> のとき、Tミノの回転入れに必要な屋根の探索を実行する。
-<cite>no</cite> を指定した場合は、屋根の探索をスキップされ、そのままではTミノを入れられない地形も解として表示される。</p>
+<p>このオプションが <cite>yes</cite> のとき、Tミノの回転入れに必要な屋根の探索を実行する。</p>
+<p><cite>no</cite> を指定した場合は、屋根の探索をスキップされ、そのままではTミノを入れられない地形も解として表示される。
+(<code class="docutils literal notranslate"><span class="pre">--filter</span></code> によって解が表示されない場合もありますのでご注意ください)</p>
 <p>もし、屋根なしでTミノをそのまま入れられる解が必要であれば <cite>-r yes -mr 0</cite> を指定する。</p>
 </div>
 <div class="section" id="mr-max-roof-default-1">
