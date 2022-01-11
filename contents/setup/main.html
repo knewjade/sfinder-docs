@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>コマンド: setup &mdash; solution-finder 1.03 ドキュメント</title>
+  <title>コマンド: setup &mdash; solution-finder 1.02 ドキュメント</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/setup/main.html"/>
@@ -154,17 +154,22 @@
 <li class="toctree-l2"><a class="reference internal" href="#id1">概要</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">基本コマンド</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">詳細</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">フィールドの指定方法</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id5">テト譜から入力するとき</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">フィールドファイルから入力するとき</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">補足</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#patterns">入力パターン <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> について</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">マージンエリアについて</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">出力フォーマット</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id6">フィールドの指定方法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">テト譜から入力するとき</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">フィールドファイルから入力するとき</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">出力フォーマット</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#html">HTML形式</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#csv">CSV形式</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id9">オプション一覧</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id11">オプション一覧</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#t-tetfu-default"><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tetfu</span></code> [default: なし]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#p-page-default-1"><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--page</span></code> [default: 1]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#p-patterns-default"><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> [default: なし]</a></li>
@@ -347,7 +352,7 @@
 <div class="section" id="id1">
 <h2>概要<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ある地形から指定したブロックを埋める操作手順をすべて列挙します。</p>
-<p>そのとき、探索時に置いても置かなくても良い場所（マージンエリア）を指定することもできます。</p>
+<p>そのとき、探索時に置いても置かなくても良い場所（マージンエリア）を補助的に指定することもできます。</p>
 <p>探索結果は HTMLファイル で出力されます。</p>
 </div>
 <div class="section" id="id2">
@@ -386,8 +391,11 @@
 <p>それを防ぐため、解が除外される前に「ミノを置く」「1ライン全て埋める」などの操作を行うことができます。
 詳細は  <code class="docutils literal notranslate"><span class="pre">--operate</span></code> オプションをご参照ください。</p>
 <p>この例では <code class="docutils literal notranslate"><span class="pre">--operate</span> <span class="pre">&quot;T-Reverse(2,2)&quot;</span></code> で1つめの解を取り出すことができます。</p>
-<hr class="docutils" />
-<p>最後に、入力パターン <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> について補足します。</p>
+</div>
+<div class="section" id="id4">
+<h2>補足<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="patterns">
+<h3>入力パターン <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> について<a class="headerlink" href="#patterns" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>デフォルトでは <code class="docutils literal notranslate"><span class="pre">--patterns</span></code> で入力したミノは「ミノ順」として解釈されます。</p>
 <p>このとき、解にはすべてのミノを使用した解が表示されます。
 また、ミノ順の関係で組むことができない解は表示されません。</p>
@@ -397,10 +405,30 @@
 <p><code class="docutils literal notranslate"><span class="pre">--combination</span> <span class="pre">yes</span></code> のときに表示される解は「必ず埋めるエリア <code class="docutils literal notranslate"><span class="pre">--fill</span></code>」をカバーする最小限のミノが表示されます。
 置くミノの個数を固定したい場合は <code class="docutils literal notranslate"><span class="pre">--n-pieces</span></code> を設定してください。</p>
 </div>
-<div class="section" id="id4">
-<h2>フィールドの指定方法<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="id5">
-<h3>テト譜から入力するとき<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>マージンエリアについて<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">--free</span></code> <cite>--margin`</cite> で埋めても埋めなくても良いマージンエリアを指定できます。</p>
+<p>ただしこれらの領域は、<code class="docutils literal notranslate"><span class="pre">--fill</span></code> を埋める過程で、あくまで補助的な領域として利用される点にご注意ください。</p>
+<p>例1）</p>
+<p><a class="reference internal" href="../../_images/attention_sample_001.png"><img alt="attention_sample_001" src="../../_images/attention_sample_001.png" style="width: 171.0px; height: 69.0px;" /></a>
+<a class="reference internal" href="contents/setup/img/attention_sample_001_1.png"><img alt="attention_sample_001_1" src="contents/setup/img/attention_sample_001_1.png" /></a></p>
+<p>Tスピンの屋根にあたる部分にマージンエリアが設定されています。
+領域の広さ的にはIミノが収まる範囲ですが <code class="docutils literal notranslate"><span class="pre">--fill</span></code> に寄与していないため、Tミノのみが解として出力されます。</p>
+<p>例2）</p>
+<p><a class="reference internal" href="../../_images/attention_sample_002.png"><img alt="attention_sample_002" src="../../_images/attention_sample_002.png" style="width: 171.0px; height: 86.0px;" /></a>
+<a class="reference internal" href="../../_images/attention_sample_002_2.png"><img alt="attention_sample_002_2" src="../../_images/attention_sample_002_2.png" style="width: 171.0px; height: 86.0px;" /></a>
+<a href="#id13"><span class="problematic" id="id14">|attention_sample_002_3|</span></a></p>
+<p>こちらの地形も <code class="docutils literal notranslate"><span class="pre">--fill</span></code> に直接寄与しないミノがマージンエリアに使われています。
+例1と異なる点として、
+例1ではマージンエリアがなくても成立しますが、
+例2はこれらのミノが足場として使われているため、存在しないと組むことができません。</p>
+<p>あくまで、仕様上は <code class="docutils literal notranslate"><span class="pre">--fill</span></code> のみが判定対象となっているので、こちらの解も出力されません。</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>フィールドの指定方法<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id7">
+<h3>テト譜から入力するとき<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p><a class="reference internal" href="../../_images/fumen_sample_003.png"><img alt="fumen_sample_003" src="../../_images/fumen_sample_003.png" style="width: 171.0px; height: 69.0px;" /></a></p>
 <p><code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">sfinder.jar</span> <span class="pre">setup</span> <span class="pre">-t</span> <span class="pre">v115&#64;9gV4whCe1hCeA82hAeB8XpA8KeAgH</span> <span class="pre">--fill</span> <span class="pre">I</span> <span class="pre">--margin</span> <span class="pre">O</span> <span class="pre">--free</span> <span class="pre">S</span> <span class="pre">-p</span> <span class="pre">[^T]!</span> <span class="pre">-op</span> <span class="pre">&quot;T-Reverse(7,2)&quot;</span> <span class="pre">-e</span> <span class="pre">holes</span></code></p>
 <p>オプションで「必ず埋める場所」「マージンエリア」「フリーエリア」の色を指定してください。</p>
@@ -410,8 +438,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">-F</span></code> or <code class="docutils literal notranslate"><span class="pre">--free</span></code> → マージンエリア かつ 常に穴を許容するエリア</p></li>
 </ul>
 </div>
-<div class="section" id="id6">
-<h3>フィールドファイルから入力するとき<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id8">
+<h3>フィールドファイルから入力するとき<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>入力例</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">++++++*</span><span class="n">___</span>
 <span class="o">******</span><span class="n">___X</span>
@@ -433,8 +461,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="id7">
-<h2>出力フォーマット<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id9">
+<h2>出力フォーマット<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>出力フォーマットは、以下の方式から選択できます。
 変更したい場合は、オプションから変更できます。</p>
 <ul class="simple">
@@ -530,8 +558,8 @@ http://fumen.zui.jp/?v115@4gAtHeBtBewwEeAtglQ4xwg0RpAeilR4wwg0RpAezh?Q4h0JeAgWHA
 </ul>
 </div>
 </div>
-<div class="section" id="id9">
-<h2>オプション一覧<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id11">
+<h2>オプション一覧<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 15%" />
