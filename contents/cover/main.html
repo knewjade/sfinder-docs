@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>コマンド: cover &mdash; solution-finder 1.10 ドキュメント</title>
+  <title>コマンド: cover &mdash; solution-finder 1.02 ドキュメント</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/cover/main.html"/>
@@ -260,8 +260,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#sb-starting-b2b-default-0"><code class="docutils literal notranslate"><span class="pre">-sb</span></code>, <code class="docutils literal notranslate"><span class="pre">--starting-b2b</span></code> [default: 0]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#p-priority-default-no"><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--priority</span></code> [default: no]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#l-last-sd-default-0"><code class="docutils literal notranslate"><span class="pre">-l</span></code>, <code class="docutils literal notranslate"><span class="pre">--last-sd</span></code> [default: 0]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ms-max-softdrop-default-1"><code class="docutils literal notranslate"><span class="pre">-ms</span></code>, <code class="docutils literal notranslate"><span class="pre">--max-softdrop</span></code> [default: -1]</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mc-max-clearline-default-1"><code class="docutils literal notranslate"><span class="pre">-mc</span></code>, <code class="docutils literal notranslate"><span class="pre">--max-clearline</span></code> [default: -1]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#o-output-base-default-output-cover-csv"><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output-base</span></code> [default: output/cover.csv]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lp-log-path-default-output-last-output-txt"><code class="docutils literal notranslate"><span class="pre">-lp</span></code>, <code class="docutils literal notranslate"><span class="pre">--log-path</span></code> [default: output/last_output.txt]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fp-field-path-default-input-field-txt"><code class="docutils literal notranslate"><span class="pre">-fp</span></code>, <code class="docutils literal notranslate"><span class="pre">--field-path</span></code> [default: input/field.txt]</a></li>
@@ -506,14 +504,6 @@ AND = 16.11 % [812/5040]
 <td><p><code class="docutils literal notranslate"><span class="pre">--last-sd</span></code></p></td>
 <td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-ms</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">--max-softdrop</span></code></p></td>
-<td><p>-1</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-mc</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">--max-clearline</span></code></p></td>
-<td><p>-1</p></td>
-</tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-o</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">--output-base</span></code></p></td>
 <td><p>output/cover.csv</p></td>
@@ -580,50 +570,10 @@ AND = 16.11 % [812/5040]
 <li><dl class="simple">
 <dt>normal</dt><dd><ul>
 <li><p>指定されたミノの置き場所通りにすべて置くことができれば成功とする</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Mode:</span> <span class="pre">1L</span></code> と同等のモードです</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="simple">
-<dt>1L (1line, 1lines) ~ 4L (4line, 4lines)</dt><dd><ul>
-<li><p>指定されたライン数以上での消去を許可された状況下で、指定されたミノの置き場所通りにすべて置くことができれば成功とする</p></li>
-<li><p>たとえば <code class="docutils literal notranslate"><span class="pre">3L</span></code>　を指定した場合、3ライン or 4ライン が可能です</p></li>
-<li><p>ライン数は <code class="docutils literal notranslate"><span class="pre">1~4</span></code> の間で指定できます</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>1L-OR-PC (1line-OR-PC, 1lines-OR-PC) ~ 4L-OR-PC (4line-OR-PC, 4lines-OR-PC)</dt><dd><p>-通常のライン消去 (<code class="docutils literal notranslate"><span class="pre">1L</span> <span class="pre">~</span> <span class="pre">4L</span></code>) に加えて、Perfect Clearも許可します
-- たとえば <code class="docutils literal notranslate"><span class="pre">3L-OR-PC</span></code>　を指定した場合、3ライン or 4ライン or 任意のライン数のPC が可能です
-- ライン数は <code class="docutils literal notranslate"><span class="pre">1~4</span></code> の間で指定できます</p>
-</dd>
-</dl>
-</li>
-</ul>
-<p>※ 上の3つのモードでは <code class="docutils literal notranslate"><span class="pre">--max-softdrop</span></code> <code class="docutils literal notranslate"><span class="pre">--max-clearline</span></code> をさらに指定できます</p>
-<p>&lt;Tetris系&gt;</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>tetris</dt><dd><ul>
-<li><p>テトリス(4ライン消去)を1回以上しながら、指定されたミノの置き場所通りにすべて置くことができれば成功とする</p></li>
-<li><p>途中でTetrisが含まれていれば、それ以外のミノでライン消去が発生しても成功となる</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>tetris-end</dt><dd><ul>
-<li><p>指定されたミノの置き場所通りにすべて置きながら、かつ最後の操作がテトリス(4ライン消去)にできれば成功とする</p></li>
-<li><p>最後がTetrisであれば、それ以外のミノでライン消去が発生しても成功となる</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-<p>&lt;T-Spin系&gt;</p>
-<ul class="simple">
 <li><dl class="simple">
 <dt>b2b</dt><dd><ul>
 <li><p>B2Bを継続したまま、指定されたミノの置き場所通りにすべて置くことができれば成功とする</p></li>
@@ -665,13 +615,18 @@ AND = 16.11 % [812/5040]
 </dd>
 </dl>
 </li>
-</ul>
-<p>&lt;B2B系&gt;</p>
-<ul class="simple">
 <li><dl class="simple">
-<dt>b2b</dt><dd><ul>
-<li><p>B2Bを継続したまま、指定されたミノの置き場所通りにすべて置くことができれば成功とする</p></li>
-<li><p>つまり、途中でテトリス or Tスピン以外でライン消去が発生する場合は失敗となる</p></li>
+<dt>tetris</dt><dd><ul>
+<li><p>テトリス(4ライン消去)を1回以上しながら、指定されたミノの置き場所通りにすべて置くことができれば成功とする</p></li>
+<li><p>途中でTetrisが含まれていれば、それ以外のミノでライン消去が発生しても成功となる</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>tetris-end</dt><dd><ul>
+<li><p>指定されたミノの置き場所通りにすべて置きながら、かつ最後の操作がテトリス(4ライン消去)にできれば成功とする</p></li>
+<li><p>最後がTetrisであれば、それ以外のミノでライン消去が発生しても成功となる</p></li>
 </ul>
 </dd>
 </dl>
@@ -712,20 +667,6 @@ AND = 16.11 % [812/5040]
 つまり今回の例では、Oミノを置いた後であれば、Zミノを置くことができます。</p>
 <p>なお、テト譜ごとで必要なミノ数が異なる場合では、それぞれのテト譜で適用されるタイミングが変わります。</p>
 <p>たとえば、4ミノと3ミノの組み方を指定したケースでは、それぞれの組み方で3ミノ・2ミノ置いた後から適用されることになります。</p>
-</div>
-<div class="section" id="ms-max-softdrop-default-1">
-<h3><code class="docutils literal notranslate"><span class="pre">-ms</span></code>, <code class="docutils literal notranslate"><span class="pre">--max-softdrop</span></code> [default: -1]<a class="headerlink" href="#ms-max-softdrop-default-1" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>途中でSoftdropを使用できる最大の回数を指定できます。指定された回数もOKとなります。</p>
-<p>指定された回数より多くのSoftdropを使用しないといけない置き方は失敗となります。</p>
-<p>このオプションは <code class="docutils literal notranslate"><span class="pre">normal</span></code> <code class="docutils literal notranslate"><span class="pre">1L</span> <span class="pre">~</span> <span class="pre">4L</span></code> <code class="docutils literal notranslate"><span class="pre">1L-OR-PC</span> <span class="pre">~</span> <span class="pre">4L-OR-PC</span></code> モードで有効となります。</p>
-<p>もし <code class="docutils literal notranslate"><span class="pre">-1</span></code> を指定した場合、Softdropの回数は制限されません。</p>
-</div>
-<div class="section" id="mc-max-clearline-default-1">
-<h3><code class="docutils literal notranslate"><span class="pre">-mc</span></code>, <code class="docutils literal notranslate"><span class="pre">--max-clearline</span></code> [default: -1]<a class="headerlink" href="#mc-max-clearline-default-1" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>途中でライン消去しても良い最大の回数を指定できます。指定された回数もOKとなります。</p>
-<p>指定された回数より多くのライン消去が発生する置き方は失敗となります。</p>
-<p>このオプションは <code class="docutils literal notranslate"><span class="pre">normal</span></code> <code class="docutils literal notranslate"><span class="pre">1L</span> <span class="pre">~</span> <span class="pre">4L</span></code> <code class="docutils literal notranslate"><span class="pre">1L-OR-PC</span> <span class="pre">~</span> <span class="pre">4L-OR-PC</span></code> モードで有効となります。</p>
-<p>もし <code class="docutils literal notranslate"><span class="pre">-1</span></code> を指定した場合、ライン消去の回数は制限されません。</p>
 </div>
 <div class="section" id="o-output-base-default-output-cover-csv">
 <h3><code class="docutils literal notranslate"><span class="pre">-o</span></code>, <code class="docutils literal notranslate"><span class="pre">--output-base</span></code> [default: output/cover.csv]<a class="headerlink" href="#o-output-base-default-output-cover-csv" title="このヘッドラインへのパーマリンク">¶</a></h3>
