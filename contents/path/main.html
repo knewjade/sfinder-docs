@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>コマンド: path &mdash; solution-finder 1.11 ドキュメント</title>
+  <title>コマンド: path &mdash; solution-finder 1.20 ドキュメント</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://github.com/knewjade/solution-finder/latest/contents/path/main.html"/>
@@ -646,6 +646,8 @@ noの場合、解自体から抽出したパターンをもとに、重複をチ
 <li><p>指定したファイル名 + _unique に unique (重複をのぞいた手順) の結果が出力される。</p></li>
 <li><p>指定したファイル名 + _minimal に minimal (同じミノ順をカバーするパターンをのぞいた手順) の結果が出力される。</p></li>
 </ul>
+<p><code class="docutils literal notranslate"><span class="pre">--format</span> <span class="pre">csv</span></code> の場合に限り、 <code class="docutils literal notranslate"><span class="pre">-</span></code> を指定することで、CSVファイルと同じ結果を標準出力します。
+特に <code class="docutils literal notranslate"><span class="pre">--key</span> <span class="pre">none</span></code> の場合は <code class="docutils literal notranslate"><span class="pre">--max-layer</span></code> によって出力されるCSVファイルが選択されます。</p>
 </div>
 <div class="section" id="lp-log-path-default-output-last-output-txt">
 <h3><code class="docutils literal notranslate"><span class="pre">-lp</span></code>, <code class="docutils literal notranslate"><span class="pre">--log-path</span></code> [default: output/last_output.txt]<a class="headerlink" href="#lp-log-path-default-output-last-output-txt" title="このヘッドラインへのパーマリンク">¶</a></h3>
